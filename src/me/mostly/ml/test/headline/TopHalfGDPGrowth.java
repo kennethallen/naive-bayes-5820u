@@ -1,12 +1,12 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.test.BinaryOracle;
+import me.mostly.ml.BinaryClassifier;
 
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-class TopHalfGDPGrowth implements BinaryOracle<Headline> {
+class TopHalfGDPGrowth implements BinaryClassifier<Headline> {
 
     static final HashSet<Integer> goodYears = new HashSet<>();
 

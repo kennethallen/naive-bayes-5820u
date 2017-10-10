@@ -1,12 +1,11 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.test.BinaryOracle;
-import me.mostly.ml.test.Oracle;
+import me.mostly.ml.BinaryClassifier;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-class ElectionProximate implements BinaryOracle<Headline> {
+class ElectionProximate implements BinaryClassifier<Headline> {
 
     static final List<Long> pollingDays = new ArrayList<>(4);
     static {

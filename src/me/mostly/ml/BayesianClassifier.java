@@ -1,12 +1,14 @@
 package me.mostly.ml;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 
 public class BayesianClassifier<E, C, M extends Model<? super E>>
         extends HashMap<C, M> implements Classifier<E, C> {
+
+    @Override
+    public Collection<? extends C> allClasses() {
+        return keySet();
+    }
 
     @Override
     public Optional<C> classify(final E input) {

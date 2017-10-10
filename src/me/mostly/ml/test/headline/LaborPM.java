@@ -1,14 +1,11 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.test.BinaryOracle;
-import me.mostly.ml.test.Oracle;
+import me.mostly.ml.BinaryClassifier;
 
-import java.util.Arrays;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Optional;
 
-class LaborPM implements BinaryOracle<Headline> {
+class LaborPM implements BinaryClassifier<Headline> {
 
     private static final long laborIn, laborOut;
     static {

@@ -1,9 +1,6 @@
 package me.mostly.ml.test;
 
-import me.mostly.ml.BayesianClassifier;
-import me.mostly.ml.Vocabulary;
-import me.mostly.ml.WordBag;
-import me.mostly.ml.WordBagModel;
+import me.mostly.ml.*;
 
 import java.util.Collections;
 import java.util.SortedMap;
@@ -13,12 +10,12 @@ public class WordBagTest<E extends WordBag, C> {
 
     public final Vocabulary vocab;
 
-    public final Oracle<? super E, ? extends C> oracle;
+    public final Classifier<? super E, ? extends C> oracle;
     public final BayesianClassifier<WordBag, C, WordBagModel> classifier;
 
     protected final SortedMap<C, SortedMap<C, Integer>> results;
 
-    public WordBagTest(final Vocabulary vocab, Oracle<? super E, ? extends C> oracle) {
+    public WordBagTest(final Vocabulary vocab, Classifier<? super E, ? extends C> oracle) {
         this.vocab = vocab;
         this.oracle = oracle;
 

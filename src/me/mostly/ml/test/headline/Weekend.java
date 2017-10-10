@@ -1,14 +1,11 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.test.BinaryOracle;
-import me.mostly.ml.test.Oracle;
+import me.mostly.ml.BinaryClassifier;
 
-import java.util.Arrays;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Optional;
 
-class Weekend implements BinaryOracle<Headline> {
+class Weekend implements BinaryClassifier<Headline> {
 
     @Override
     public Optional<Boolean> classify(Headline element) {

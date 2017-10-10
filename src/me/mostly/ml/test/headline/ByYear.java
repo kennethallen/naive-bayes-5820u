@@ -1,6 +1,6 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.test.Oracle;
+import me.mostly.ml.Classifier;
 
 import java.util.Calendar;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-class ByYear implements Oracle<Headline, Integer> {
+class ByYear implements Classifier<Headline, Integer> {
 
     @Override
     public List<Integer> allClasses() {

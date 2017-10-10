@@ -1,13 +1,13 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.test.Oracle;
+import me.mostly.ml.Classifier;
 
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 
-class BySeason implements Oracle<Headline, String> {
+class BySeason implements Classifier<Headline, String> {
 
     private static final String[] NAMES = {"1/Winter", "2/Spring", "3/Summer", "4/Fall"};
 

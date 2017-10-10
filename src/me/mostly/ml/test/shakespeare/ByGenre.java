@@ -1,12 +1,12 @@
 package me.mostly.ml.test.shakespeare;
 
-import me.mostly.ml.test.Oracle;
+import me.mostly.ml.Classifier;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class ByGenre implements Oracle<Play, Genre> {
+public class ByGenre implements Classifier<Play, Genre> {
 
     @Override
     public List<? extends Genre> allClasses() {

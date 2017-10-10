@@ -1,13 +1,10 @@
 package me.mostly.ml.test;
 
-import me.mostly.ml.BayesianClassifier;
-import me.mostly.ml.Vocabulary;
-import me.mostly.ml.WordBag;
-import me.mostly.ml.WordBagModel;
+import me.mostly.ml.*;
 
 public class WordBagBinaryTest<E extends WordBag> extends WordBagTest<E, Boolean> {
 
-    public WordBagBinaryTest(Vocabulary vocab, BinaryOracle<? super E> oracle) {
+    public WordBagBinaryTest(Vocabulary vocab, BinaryClassifier<? super E> oracle) {
         super(vocab, oracle);
     }
 

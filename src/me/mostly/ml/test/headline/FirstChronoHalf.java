@@ -1,10 +1,10 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.test.BinaryOracle;
+import me.mostly.ml.BinaryClassifier;
 
 import java.util.*;
 
-public class FirstChronoHalf implements BinaryOracle<Headline> {
+public class FirstChronoHalf implements BinaryClassifier<Headline> {
 
     private static final Date MIDPOINT;
     static {

@@ -1,11 +1,7 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.BayesianClassifier;
-import me.mostly.ml.WordBag;
 import me.mostly.ml.Vocabulary;
-import me.mostly.ml.WordBagModel;
-import me.mostly.ml.test.BinaryOracle;
-import me.mostly.ml.test.Oracle;
+import me.mostly.ml.BinaryClassifier;
 import me.mostly.ml.test.WordBagBinaryTest;
 import me.mostly.ml.test.WordBagTest;
 
@@ -13,7 +9,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -54,8 +49,8 @@ public class Main {
 
         Arrays.asList(new ByMonth(), new BySeason(), new ByYear(), new ElectionProximate(), new FirstChronoHalf(),
                 new LaborPM(), new TopHalfGDPGrowth(), new Weekend()).forEach(oracle -> {
-            final WordBagTest<Headline, ?> tester = oracle instanceof BinaryOracle
-                    ? new WordBagBinaryTest<>(vocab, (BinaryOracle<Headline>) oracle)
+            final WordBagTest<Headline, ?> tester = oracle instanceof BinaryClassifier
+                    ? new WordBagBinaryTest<>(vocab, (BinaryClassifier<Headline>) oracle)
                     : new WordBagTest<>(vocab, oracle);
 
             trainingHLs.forEach(tester::learn);

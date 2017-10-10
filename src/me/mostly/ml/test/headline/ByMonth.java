@@ -1,13 +1,13 @@
 package me.mostly.ml.test.headline;
 
-import me.mostly.ml.test.Oracle;
+import me.mostly.ml.Classifier;
 
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 
-class ByMonth implements Oracle<Headline, String> {
+class ByMonth implements Classifier<Headline, String> {
 
     private static final String[] NAMES = {
             "01/Jan", "02/Feb", "03/Mar", "04/Apr", "05/May", "06/Jun",
