@@ -1,0 +1,8 @@
+Report Structure
+1. Intro: Problem + Naive (Text Documents)
+2. Bayes: Background + Formula Classifier
+3. Data Processing + Block Diagram
+4. Results + Performance Measurement
+5. Discussion
+
+"Bayesian approach to news headline classification"
