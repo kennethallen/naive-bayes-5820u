@@ -5,8 +5,8 @@ import java.util.IdentityHashMap;
 
 public class Vocabulary {
 
-    private final IdentityHashMap<String, Integer> idLookup = new IdentityHashMap<>();
-    private final HashMap<Integer, String> wordLookup = new HashMap<>();
+    public final IdentityHashMap<String, Integer> idLookup = new IdentityHashMap<>();
+    public final HashMap<Integer, String> wordLookup = new HashMap<>();
 
     public int size() {
         return wordLookup.size();

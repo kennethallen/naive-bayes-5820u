@@ -36,13 +36,13 @@ public class Main {
 
         Arrays.asList(
 //                new ByMonth(),
-//                new BySeason(),
+                new BySeason(),
 //                new ByYear(),
 //                new ElectionProximate(),
 //                new FirstChronoHalf(),
 //                new LaborPM(),
 //                new TopHalfGDPGrowth(),
-//                new Weekend(),
+                new Weekend(),
                 new Crowdsourced()
                 ).forEach(oracle -> {
             final WordBagTest<Headline, ?> tester = oracle instanceof BinaryClassifier

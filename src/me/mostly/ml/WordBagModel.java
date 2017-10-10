@@ -5,7 +5,7 @@ import java.util.*;
 
 public class WordBagModel extends BaseLearningModel<WordBag> {
 
-    protected final WordBag wordBag;
+    public final WordBag wordBag;
     protected final HashMap<Integer, BigDecimal> wordProbs = new HashMap<>();
 
     public WordBagModel(Vocabulary vocab) {
