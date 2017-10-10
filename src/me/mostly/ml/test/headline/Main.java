@@ -20,9 +20,9 @@ public class Main {
 
     public static void main(final String[] args) {
         final Vocabulary vocab = new Vocabulary();
-        final List<Headline> headlines =
-                Arrays.stream(Optional.ofNullable(new File(args[0]).listFiles()).orElseThrow(
-                        () -> new IllegalArgumentException(args[0] + " is not a directory.")))
+        final List<Headline> headlines = Arrays.stream(args)
+                .map(File::new)
+                .filter(f -> f.getName().contains("examiner"))
                 .flatMap(path -> readHeadlines(vocab, path).stream())
                 .collect(Collectors.toList());
 
@@ -35,15 +35,15 @@ public class Main {
                 trainingHLs = headlines.subList(testHLs.size(), headlines.size());
 
         Arrays.asList(
-//                new ByMonth(),
+                new ByMonth(),
                 new BySeason(),
-//                new ByYear(),
-//                new ElectionProximate(),
-//                new FirstChronoHalf(),
+                new ByYear(),
+                new FirstChronoHalf(headlines),
+                new Weekend()
+//                new AusNatlElectionProximate(),
 //                new LaborPM(),
 //                new TopHalfGDPGrowth(),
-                new Weekend(),
-                new Crowdsourced()
+//                new Crowdsourced()
                 ).forEach(oracle -> {
             final WordBagTest<Headline, ?> tester = oracle instanceof BinaryClassifier
                     ? new WordBagBinaryTest<>(vocab, (BinaryClassifier<Headline>) oracle)

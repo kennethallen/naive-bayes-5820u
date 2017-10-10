@@ -71,7 +71,7 @@ public class WordBagTest<E extends WordBag, C> {
     }
 
     public String mostPredictiveWords() {
-        final HashMap<C, TopTen> tops = new HashMap<>();
+        final SortedMap<C, TopTen> tops = new TreeMap<>();
         oracle.allClasses().forEach(c -> tops.put(c, new TopTen(c)));
         vocab.wordLookup.keySet().forEach(word -> tops.values().forEach(top -> top.consider(word)));
 
@@ -87,7 +87,7 @@ public class WordBagTest<E extends WordBag, C> {
         }
 
         private int classCount(final Integer word) {
-            return classifier.get(cls).wordBag.wordCounts.getOrDefault(word, 0);
+            return classifier.get(cls).wordBag.wordCounts.getOrDefault(word,0);
         }
         private int otherCount(final Integer word) {
             return classifier.entrySet().stream()
@@ -98,7 +98,7 @@ public class WordBagTest<E extends WordBag, C> {
         }
 
         public void consider(Integer word) {
-            final float score = (classCount(word) + 1) / (otherCount(word) + classifier.size() - 1);
+            final float score = (classCount(word) + 1) / (otherCount(word) + classifier.allClasses().size() - 1);
 
             int newIdx = count;
             while (newIdx > 0 && score > top[newIdx - 1].score)

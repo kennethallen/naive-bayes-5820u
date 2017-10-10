@@ -24,6 +24,9 @@ class TopHalfGDPGrowth implements BinaryClassifier<Headline> {
 
     @Override
     public Optional<Boolean> classify(Headline element) {
+        if (!element.source.equals("Australian Broadcasting Corporation")) {
+            return Optional.empty();
+        }
         final Calendar cal = Calendar.getInstance();
         cal.setTime(element.date);
         final int year = cal.get(Calendar.YEAR);

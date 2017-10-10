@@ -5,7 +5,7 @@ import me.mostly.ml.BinaryClassifier;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-class ElectionProximate implements BinaryClassifier<Headline> {
+class AusNatlElectionProximate implements BinaryClassifier<Headline> {
 
     static final List<Long> pollingDays = new ArrayList<>(4);
     static {
