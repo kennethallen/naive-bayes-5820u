@@ -2,6 +2,8 @@ package me.mostly.ml.test;
 
 import me.mostly.ml.*;
 
+import java.util.AbstractMap;
+
 public class WordBagBinaryTest<E extends WordBag> extends WordBagTest<E, Boolean> {
 
     public WordBagBinaryTest(Vocabulary vocab, BinaryClassifier<? super E> oracle) {

@@ -4,7 +4,7 @@ import me.mostly.ml.BinaryClassifier;
 
 import java.util.*;
 
-public class FirstChronoHalf implements BinaryClassifier<Headline> {
+class FirstChronoHalf implements BinaryClassifier<Headline> {
 
     private static final Date MIDPOINT;
     static {

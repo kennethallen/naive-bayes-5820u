@@ -1,17 +1,19 @@
 package me.mostly.ml;
 
 import java.util.HashMap;
+import java.util.IdentityHashMap;
 
 public class Vocabulary {
 
-    private final HashMap<String, Integer> idLookup = new HashMap<>();
+    private final IdentityHashMap<String, Integer> idLookup = new IdentityHashMap<>();
     private final HashMap<Integer, String> wordLookup = new HashMap<>();
 
     public int size() {
         return wordLookup.size();
     }
 
-    public int getId(final String s) {
+    public int getId(String s) {
+        s = s.intern();
         return idLookup.computeIfAbsent(s, word -> {
             final Integer id = size();
             wordLookup.put(id, word);
@@ -19,7 +21,7 @@ public class Vocabulary {
         });
     }
 
-    public String getWord(final int id) {
+    public String getWord(final Integer id) {
         return wordLookup.get(id);
     }
 
