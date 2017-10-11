@@ -22,7 +22,7 @@ public class Main {
         final Vocabulary vocab = new Vocabulary();
         final List<Headline> headlines = Arrays.stream(args)
                 .map(File::new)
-                .filter(f -> f.getName().contains("examiner"))
+                .filter(f -> f.getName().contains("abc"))
                 .flatMap(path -> readHeadlines(vocab, path).stream())
                 .collect(Collectors.toList());
 

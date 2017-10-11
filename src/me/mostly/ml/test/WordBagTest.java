@@ -1,5 +1,6 @@
 package me.mostly.ml.test;
 
+import me.mostly.collection.Toplist;
 import me.mostly.ml.*;
 
 import java.util.*;
@@ -71,66 +72,43 @@ public class WordBagTest<E extends WordBag, C> {
     }
 
     public String mostPredictiveWords() {
-        final SortedMap<C, TopTen> tops = new TreeMap<>();
-        oracle.allClasses().forEach(c -> tops.put(c, new TopTen(c)));
-        vocab.wordLookup.keySet().forEach(word -> tops.values().forEach(top -> top.consider(word)));
+        final SortedMap<C, Toplist<ScoredWord>> tops = new TreeMap<>();
+        oracle.allClasses().forEach(c -> tops.put(c, new Toplist<>(10)));
+        vocab.wordLookup.keySet().forEach(word -> tops.forEach((cls, top) -> top.add(new ScoredWord(word, cls))));
 
-        return tops.values().stream().map(t -> "\n\n" + t).reduce("", String::concat);
+        return tops.entrySet().stream()
+                .map(e -> "\n\nMost indicative words for class " + e.getKey() + ":\n"
+                        + e.getValue().stream()
+                        .map(Object::toString)
+                        .reduce("", (a, b) -> a + '\n' + b))
+                .reduce("", String::concat);
     }
-    private class TopTen {
-        final C cls;
-        final ScoredWord[] top = new ScoredWord[10];
-        int count = 0;
 
-        public TopTen(C cls) {
-            this.cls = cls;
-        }
+    private class ScoredWord implements Comparable<ScoredWord> {
+        final int classCount, otherCount;
+        final float score;
+        final Integer word;
 
-        private int classCount(final Integer word) {
-            return classifier.get(cls).wordBag.wordCounts.getOrDefault(word,0);
-        }
-        private int otherCount(final Integer word) {
-            return classifier.entrySet().stream()
+        public ScoredWord(Integer word, C cls) {
+            this.word = word;
+            classCount = classifier.get(cls).wordBag.wordCounts.getOrDefault(word,0);;
+            otherCount = classifier.entrySet().stream()
                     .filter(e -> !e.getKey().equals(cls))
                     .map(Map.Entry::getValue)
                     .mapToInt(i -> i.wordBag.wordCounts.getOrDefault(word, 0))
                     .sum();
+            score = (1f + classCount) / (classifier.allClasses().size() - 1 + otherCount);
         }
 
-        public void consider(Integer word) {
-            final float score = (classCount(word) + 1) / (otherCount(word) + classifier.allClasses().size() - 1);
-
-            int newIdx = count;
-            while (newIdx > 0 && score > top[newIdx - 1].score)
-                newIdx--;
-
-            if (newIdx < top.length) {
-                System.arraycopy(top, newIdx, top, newIdx + 1, top.length - 1 - newIdx);
-                top[newIdx] = new ScoredWord(word, score);
-                if (count < top.length)
-                    count++;
-            }
+        @Override
+        public int compareTo(ScoredWord w) {
+            final int comp = Float.compare(score, w.score);
+            return comp != 0 ? comp : word.compareTo(w.word);
         }
 
         @Override
         public String toString() {
-            return "Most indicative words for class " + cls + ":\n"
-                    + IntStream.range(0, count)
-                            .mapToObj(i -> {
-                                final Integer word = top[i].word;
-                                return i + ": " + vocab.getWord(word)
-                                        + " (" + classCount(word) + " in class, " + otherCount(word) + " out of class)";
-                            })
-                            .reduce("", (a, b) -> a + '\n' + b);
-        }
-    }
-    private static class ScoredWord {
-        final float score;
-        final Integer word;
-
-        public ScoredWord(Integer word, float score) {
-            this.word = word;
-            this.score = score;
+            return vocab.getWord(word) + " (" + classCount + " in class, " + otherCount + " out of class)";
         }
     }
 }
