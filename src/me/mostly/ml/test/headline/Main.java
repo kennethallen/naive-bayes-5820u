@@ -22,7 +22,7 @@ public class Main {
         final Vocabulary vocab = new Vocabulary();
         final List<Headline> headlines = Arrays.stream(args)
                 .map(File::new)
-                .filter(f -> f.getName().contains("abc"))
+//                .filter(f -> f.getName().contains("abc"))
                 .flatMap(path -> readHeadlines(vocab, path).stream())
                 .collect(Collectors.toList());
 
@@ -35,15 +35,15 @@ public class Main {
                 trainingHLs = headlines.subList(testHLs.size(), headlines.size());
 
         Arrays.asList(
-                new ByMonth(),
-                new BySeason(),
-                new ByYear(),
-                new FirstChronoHalf(headlines),
-                new Weekend()
+//                new ByMonth(),
+//                new BySeason(),
+//                new ByYear(),
+//                new FirstChronoHalf(headlines),
+//                new Weekend(),
 //                new AusNatlElectionProximate(),
-//                new LaborPM(),
+//                new LaborPM()
 //                new TopHalfGDPGrowth(),
-//                new Crowdsourced()
+                new Crowdsourced()
                 ).forEach(oracle -> {
             final WordBagTest<Headline, ?> tester = oracle instanceof BinaryClassifier
                     ? new WordBagBinaryTest<>(vocab, (BinaryClassifier<Headline>) oracle)
