@@ -1,0 +1,731 @@
+"C:\Program Files\Java\jdk1.8.0_111\bin\java" -Dvisualvm.id=580384148548566 -Xmx6000M "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\lib\idea_rt.jar=59007:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_111\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\rt.jar;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\out\production\BasicClassifier" me.mostly.ml.test.headline.Main headline-data/abc1.csv headline-data/abc2.csv headline-data/examiner1.csv headline-data/examiner2.csv headline-data/examiner3.csv headline-data/examiner4.csv headline-data/examiner5.csv
+Read 100000 lines
+Read 200000 lines
+Read 300000 lines
+Read 400000 lines
+Read 500000 lines
+Read 600000 lines
+Read 700000 lines
+Loaded headline-data\abc1.csv
+Read 100000 lines
+Read 200000 lines
+Read 300000 lines
+Loaded headline-data\abc2.csv
+Data read.
+
+
+
+Oracle: me.mostly.ml.test.headline.ByMonth@5af3223b
+Classifier: {11/Nov=me.mostly.ml.WordBagModel@cd7dee8, 12/Dec=me.mostly.ml.WordBagModel@794ac775, 05/May=me.mostly.ml.WordBagModel@28d97690, 06/Jun=me.mostly.ml.WordBagModel@6bf86b4a, 04/Apr=me.mostly.ml.WordBagModel@59eac843, 01/Jan=me.mostly.ml.WordBagModel@7634cd64, 08/Aug=me.mostly.ml.WordBagModel@15ba58c4, 10/Oct=me.mostly.ml.WordBagModel@3d30d302, 02/Feb=me.mostly.ml.WordBagModel@3217bc37, 09/Sep=me.mostly.ml.WordBagModel@629808fc, 03/Mar=me.mostly.ml.WordBagModel@25a31013, 07/Jul=me.mostly.ml.WordBagModel@1e306f66}
+
+108217 total, 18267 successes, 89950 failures
+Accuracy: 0.16879972647550753
+
+Real classes -> how their members were classified:
+
+01/Jan={01/Jan=2181, 02/Feb=459, 03/Mar=694, 04/Apr=522, 05/May=668, 06/Jun=476, 07/Jul=500, 08/Aug=544, 09/Sep=296, 10/Oct=553, 11/Nov=535, 12/Dec=676}
+02/Feb={01/Jan=1030, 02/Feb=1041, 03/Mar=983, 04/Apr=552, 05/May=954, 06/Jun=598, 07/Jul=613, 08/Aug=689, 09/Sep=400, 10/Oct=601, 11/Nov=635, 12/Dec=549}
+03/Mar={01/Jan=869, 02/Feb=603, 03/Mar=1819, 04/Apr=837, 05/May=1098, 06/Jun=674, 07/Jul=708, 08/Aug=813, 09/Sep=470, 10/Oct=699, 11/Nov=677, 12/Dec=576}
+04/Apr={01/Jan=814, 02/Feb=444, 03/Mar=1024, 04/Apr=1473, 05/May=1106, 06/Jun=658, 07/Jul=707, 08/Aug=713, 09/Sep=461, 10/Oct=685, 11/Nov=600, 12/Dec=532}
+05/May={01/Jan=732, 02/Feb=449, 03/Mar=935, 04/Apr=771, 05/May=2026, 06/Jun=917, 07/Jul=739, 08/Aug=766, 09/Sep=452, 10/Oct=615, 11/Nov=664, 12/Dec=533}
+06/Jun={01/Jan=784, 02/Feb=421, 03/Mar=839, 04/Apr=677, 05/May=1206, 06/Jun=1470, 07/Jul=804, 08/Aug=756, 09/Sep=438, 10/Oct=655, 11/Nov=649, 12/Dec=532}
+07/Jul={01/Jan=746, 02/Feb=429, 03/Mar=840, 04/Apr=709, 05/May=1091, 06/Jun=809, 07/Jul=1453, 08/Aug=951, 09/Sep=452, 10/Oct=647, 11/Nov=652, 12/Dec=593}
+08/Aug={01/Jan=781, 02/Feb=445, 03/Mar=819, 04/Apr=598, 05/May=1071, 06/Jun=747, 07/Jul=854, 08/Aug=1655, 09/Sep=569, 10/Oct=681, 11/Nov=622, 12/Dec=566}
+09/Sep={01/Jan=743, 02/Feb=431, 03/Mar=801, 04/Apr=594, 05/May=928, 06/Jun=629, 07/Jul=685, 08/Aug=832, 09/Sep=1070, 10/Oct=704, 11/Nov=630, 12/Dec=524}
+10/Oct={01/Jan=882, 02/Feb=484, 03/Mar=756, 04/Apr=618, 05/May=951, 06/Jun=663, 07/Jul=676, 08/Aug=713, 09/Sep=555, 10/Oct=1381, 11/Nov=789, 12/Dec=565}
+11/Nov={01/Jan=840, 02/Feb=512, 03/Mar=800, 04/Apr=599, 05/May=934, 06/Jun=679, 07/Jul=598, 08/Aug=675, 09/Sep=469, 10/Oct=772, 11/Nov=1378, 12/Dec=662}
+12/Dec={01/Jan=1081, 02/Feb=418, 03/Mar=751, 04/Apr=497, 05/May=860, 06/Jun=515, 07/Jul=603, 08/Aug=535, 09/Sep=362, 10/Oct=605, 11/Nov=729, 12/Dec=1320}
+
+Most indicative words for class 01/Jan:
+
+dakar (99 in class, 14 out of class)
+tdu (42 in class, 6 out of class)
+january (377 in class, 151 out of class)
+inauguration (58 in class, 21 out of class)
+summernats (62 in class, 26 out of class)
+kooyong (42 in class, 18 out of class)
+globes (45 in class, 21 out of class)
+caldecott (20 in class, 4 out of class)
+hopman (117 in class, 75 out of class)
+mcgilvray (14 in class, 0 out of class)
+
+Most indicative words for class 02/Feb:
+
+february (562 in class, 103 out of class)
+valentines (47 in class, 10 out of class)
+rotterdam (29 in class, 4 out of class)
+luge (28 in class, 4 out of class)
+pebble (34 in class, 8 out of class)
+marcia (58 in class, 22 out of class)
+biathlon (16 in class, 0 out of class)
+sochi (66 in class, 33 out of class)
+yasi (77 in class, 46 out of class)
+grammys (31 in class, 14 out of class)
+
+Most indicative words for class 03/Mar:
+
+ingrid (41 in class, 7 out of class)
+doral (17 in class, 0 out of class)
+crimea (30 in class, 10 out of class)
+pam (46 in class, 21 out of class)
+tirreno (14 in class, 0 out of class)
+gras (66 in class, 40 out of class)
+glenda (16 in class, 2 out of class)
+wells (146 in class, 109 out of class)
+schiavo (14 in class, 2 out of class)
+miami (90 in class, 73 out of class)
+
+Most indicative words for class 04/Apr:
+
+april (745 in class, 145 out of class)
+anzacs (75 in class, 6 out of class)
+anzac (909 in class, 282 out of class)
+ita (45 in class, 13 out of class)
+monte (45 in class, 13 out of class)
+easter (554 in class, 286 out of class)
+dawn (152 in class, 77 out of class)
+targa (53 in class, 22 out of class)
+monica (41 in class, 16 out of class)
+gallipoli (146 in class, 86 out of class)
+
+Most indicative words for class 05/May:
+
+giro (164 in class, 19 out of class)
+doomben (29 in class, 1 out of class)
+cannes (80 in class, 27 out of class)
+eurovision (88 in class, 33 out of class)
+ditalia (29 in class, 4 out of class)
+agfest (20 in class, 4 out of class)
+fedbudget (13 in class, 0 out of class)
+macron (25 in class, 13 out of class)
+oklahoma (36 in class, 26 out of class)
+garros (14 in class, 5 out of class)
+
+Most indicative words for class 06/Jun:
+
+june (764 in class, 193 out of class)
+eastbourne (37 in class, 0 out of class)
+dauphine (42 in class, 2 out of class)
+queens (321 in class, 100 out of class)
+finke (79 in class, 22 out of class)
+halle (41 in class, 7 out of class)
+orlando (55 in class, 18 out of class)
+alkatiri (39 in class, 13 out of class)
+queen's (27 in class, 6 out of class)
+confederations (25 in class, 7 out of class)
+
+Most indicative words for class 07/Jul:
+
+naidoc (111 in class, 10 out of class)
+wyd (64 in class, 5 out of class)
+july (733 in class, 194 out of class)
+pamplona (16 in class, 0 out of class)
+glasgow (56 in class, 37 out of class)
+bastille (12 in class, 0 out of class)
+booing (16 in class, 4 out of class)
+pokemon (28 in class, 17 out of class)
+chilcot (11 in class, 1 out of class)
+pileggi (11 in class, 1 out of class)
+
+Most indicative words for class 08/Aug:
+
+august (887 in class, 124 out of class)
+ekka (109 in class, 17 out of class)
+cincinnati (53 in class, 7 out of class)
+montreal (63 in class, 29 out of class)
+heydon (24 in class, 8 out of class)
+tan (65 in class, 41 out of class)
+agquip (11 in class, 0 out of class)
+najaf (49 in class, 41 out of class)
+ossetia (12 in class, 3 out of class)
+ledecky (10 in class, 1 out of class)
+
+Most indicative words for class 09/Sep:
+
+september (838 in class, 210 out of class)
+ike (27 in class, 2 out of class)
+xiii (26 in class, 3 out of class)
+dally (38 in class, 10 out of class)
+rita (20 in class, 3 out of class)
+brownlow (57 in class, 37 out of class)
+prelims (12 in class, 1 out of class)
+emmys (25 in class, 13 out of class)
+prelim (24 in class, 13 out of class)
+foty (17 in class, 8 out of class)
+
+Most indicative words for class 10/Oct:
+
+october (812 in class, 160 out of class)
+caulfield (105 in class, 30 out of class)
+halloween (36 in class, 14 out of class)
+nobel (153 in class, 101 out of class)
+lapthorne (22 in class, 6 out of class)
+wilma (16 in class, 2 out of class)
+ottawa (14 in class, 2 out of class)
+gable (16 in class, 5 out of class)
+kobane (17 in class, 6 out of class)
+sox (15 in class, 5 out of class)
+
+Most indicative words for class 11/Nov:
+
+november (814 in class, 157 out of class)
+schoolies (276 in class, 101 out of class)
+remembrance (116 in class, 37 out of class)
+nguyen (60 in class, 40 out of class)
+haiyan (37 in class, 21 out of class)
+arafats (25 in class, 11 out of class)
+faf (14 in class, 3 out of class)
+thanksgiving (13 in class, 4 out of class)
+schoolie (12 in class, 3 out of class)
+guba (9 in class, 0 out of class)
+
+Most indicative words for class 12/Dec:
+
+december (640 in class, 145 out of class)
+myefo (51 in class, 4 out of class)
+oats (117 in class, 35 out of class)
+xmas (107 in class, 43 out of class)
+christmas (1414 in class, 707 out of class)
+carols (28 in class, 4 out of class)
+skandia (23 in class, 6 out of class)
+festive (37 in class, 16 out of class)
+comanche (12 in class, 0 out of class)
+santa (72 in class, 57 out of class)
+
+
+
+Oracle: me.mostly.ml.test.headline.BySeason@f29d52c
+Classifier: {4/Fall=me.mostly.ml.WordBagModel@7608f21f, 2/Spring=me.mostly.ml.WordBagModel@799058fd, 1/Winter=me.mostly.ml.WordBagModel@7c7d3581, 3/Summer=me.mostly.ml.WordBagModel@3d3c0f97}
+
+108217 total, 37478 successes, 70739 failures
+Accuracy: 0.34632266649417376
+
+Real classes -> how their members were classified:
+
+1/Winter={1/Winter=9008, 2/Spring=6032, 3/Summer=5199, 4/Fall=4786}
+2/Spring={1/Winter=5644, 2/Spring=10660, 3/Summer=6943, 4/Fall=5412}
+3/Summer={1/Winter=5123, 2/Spring=7410, 3/Summer=9893, 4/Fall=5585}
+4/Fall={1/Winter=5695, 2/Spring=6581, 3/Summer=6329, 4/Fall=7917}
+
+Most indicative words for class 1/Winter:
+
+nye (181 in class, 11 out of class)
+dakar (105 in class, 8 out of class)
+december (711 in class, 74 out of class)
+february (589 in class, 76 out of class)
+myefo (51 in class, 4 out of class)
+wbbl (21 in class, 0 out of class)
+january (466 in class, 62 out of class)
+grammy (55 in class, 5 out of class)
+tdu (44 in class, 4 out of class)
+luge (30 in class, 2 out of class)
+
+Most indicative words for class 2/Spring:
+
+easter (795 in class, 45 out of class)
+april (824 in class, 66 out of class)
+anzacs (77 in class, 4 out of class)
+macron (37 in class, 1 out of class)
+romandie (26 in class, 0 out of class)
+giro (167 in class, 16 out of class)
+abcnews (31 in class, 1 out of class)
+doomben (29 in class, 1 out of class)
+eurovision (107 in class, 14 out of class)
+glenda (18 in class, 0 out of class)
+
+Most indicative words for class 3/Summer:
+
+wyd (69 in class, 0 out of class)
+naidoc (115 in class, 6 out of class)
+eastbourne (37 in class, 0 out of class)
+cincinnati (58 in class, 2 out of class)
+august (932 in class, 79 out of class)
+ekka (118 in class, 8 out of class)
+wimbledon (409 in class, 36 out of class)
+edgbaston (30 in class, 0 out of class)
+dauphine (42 in class, 2 out of class)
+july (830 in class, 97 out of class)
+
+Most indicative words for class 4/Fall:
+
+october (886 in class, 86 out of class)
+november (860 in class, 111 out of class)
+xiii (28 in class, 1 out of class)
+caulfield (121 in class, 14 out of class)
+september (920 in class, 128 out of class)
+halloween (46 in class, 4 out of class)
+remembrance (135 in class, 18 out of class)
+ike (27 in class, 2 out of class)
+dally (43 in class, 5 out of class)
+dunaden (15 in class, 0 out of class)
+
+
+
+Oracle: me.mostly.ml.test.headline.ByYear@3f6075ce
+Classifier: {2016=me.mostly.ml.WordBagModel@1f8404a5, 2017=me.mostly.ml.WordBagModel@23e66503, 2003=me.mostly.ml.WordBagModel@2d607f48, 2004=me.mostly.ml.WordBagModel@1112b12f, 2005=me.mostly.ml.WordBagModel@2e0c2e84, 2006=me.mostly.ml.WordBagModel@3ed2983b, 2007=me.mostly.ml.WordBagModel@10663a96, 2008=me.mostly.ml.WordBagModel@14f96a7c, 2009=me.mostly.ml.WordBagModel@5bce1e69, 2010=me.mostly.ml.WordBagModel@7177466b, 2011=me.mostly.ml.WordBagModel@50e46059, 2012=me.mostly.ml.WordBagModel@f915ab3, 2013=me.mostly.ml.WordBagModel@2487307e, 2014=me.mostly.ml.WordBagModel@6f886e9b, 2015=me.mostly.ml.WordBagModel@1c9d2d9b}
+
+108217 total, 24336 successes, 83881 failures
+Accuracy: 0.22488148812109005
+
+Real classes -> how their members were classified:
+
+2003={2003=1588, 2004=875, 2005=736, 2006=389, 2007=488, 2008=451, 2009=273, 2010=277, 2011=224, 2012=289, 2013=284, 2014=195, 2015=251, 2016=131, 2017=6}
+2004={2003=781, 2004=1675, 2005=963, 2006=417, 2007=671, 2008=523, 2009=361, 2010=378, 2011=259, 2012=328, 2013=336, 2014=201, 2015=256, 2016=148, 2017=7}
+2005={2003=559, 2004=824, 2005=1796, 2006=602, 2007=696, 2008=572, 2009=349, 2010=386, 2011=253, 2012=327, 2013=315, 2014=218, 2015=302, 2016=160, 2017=4}
+2006={2003=436, 2004=645, 2005=921, 2006=1131, 2007=847, 2008=537, 2009=295, 2010=375, 2011=224, 2012=305, 2013=310, 2014=192, 2015=251, 2016=105, 2017=3}
+2007={2003=412, 2004=557, 2005=728, 2006=590, 2007=1887, 2008=813, 2009=468, 2010=460, 2011=265, 2012=381, 2013=383, 2014=244, 2015=309, 2016=202, 2017=6}
+2008={2003=330, 2004=542, 2005=596, 2006=381, 2007=934, 2008=1915, 2009=602, 2010=566, 2011=364, 2012=499, 2013=437, 2014=277, 2015=348, 2016=255, 2017=16}
+2009={2003=273, 2004=424, 2005=530, 2006=283, 2007=702, 2008=915, 2009=1371, 2010=830, 2011=438, 2012=545, 2013=498, 2014=265, 2015=327, 2016=263, 2017=11}
+2010={2003=257, 2004=403, 2005=501, 2006=301, 2007=589, 2008=700, 2009=664, 2010=1490, 2011=632, 2012=592, 2013=511, 2014=315, 2015=328, 2016=244, 2017=11}
+2011={2003=235, 2004=374, 2005=410, 2006=236, 2007=480, 2008=561, 2009=499, 2010=794, 2011=1366, 2012=998, 2013=669, 2014=413, 2015=486, 2016=250, 2017=8}
+2012={2003=252, 2004=362, 2005=439, 2006=207, 2007=467, 2008=614, 2009=474, 2010=700, 2011=652, 2012=2084, 2013=1059, 2014=608, 2015=650, 2016=289, 2017=16}
+2013={2003=226, 2004=314, 2005=414, 2006=239, 2007=479, 2008=517, 2009=450, 2010=553, 2011=527, 2012=1087, 2013=2257, 2014=1006, 2015=793, 2016=355, 2017=15}
+2014={2003=211, 2004=255, 2005=311, 2006=192, 2007=360, 2008=382, 2009=295, 2010=400, 2011=372, 2012=679, 2013=1127, 2014=2000, 2015=960, 2016=453, 2017=34}
+2015={2003=189, 2004=238, 2005=253, 2006=153, 2007=343, 2008=391, 2009=252, 2010=294, 2011=276, 2012=592, 2013=899, 2014=1113, 2015=2057, 2016=698, 2017=37}
+2016={2003=136, 2004=182, 2005=165, 2006=89, 2007=211, 2008=330, 2009=225, 2010=219, 2011=180, 2012=334, 2013=455, 2014=415, 2015=926, 2016=1536, 2017=61}
+2017={2003=61, 2004=73, 2005=79, 2006=43, 2007=102, 2008=141, 2009=80, 2010=79, 2011=87, 2012=154, 2013=199, 2014=220, 2015=418, 2016=453, 2017=183}
+
+Most indicative words for class 2003:
+
+sars (413 in class, 83 out of class)
+amrozi (40 in class, 3 out of class)
+indemnity (71 in class, 20 out of class)
+mim (25 in class, 1 out of class)
+cwealth (38 in class, 9 out of class)
+ettridge (24 in class, 3 out of class)
+mazen (20 in class, 1 out of class)
+libertadores (18 in class, 0 out of class)
+opp (91 in class, 54 out of class)
+avellino (19 in class, 1 out of class)
+
+Most indicative words for class 2004:
+
+fallujah (185 in class, 35 out of class)
+aristide (30 in class, 0 out of class)
+najaf (67 in class, 23 out of class)
+athens (189 in class, 97 out of class)
+sadr (74 in class, 34 out of class)
+latham (399 in class, 263 out of class)
+starcraft (21 in class, 3 out of class)
+arafats (26 in class, 10 out of class)
+yukos (25 in class, 11 out of class)
+doosra (16 in class, 3 out of class)
+
+Most indicative words for class 2005:
+
+nguyen (83 in class, 17 out of class)
+vsu (64 in class, 18 out of class)
+ingrid (41 in class, 7 out of class)
+solon (48 in class, 12 out of class)
+qasim (21 in class, 1 out of class)
+corby (194 in class, 124 out of class)
+korp (20 in class, 2 out of class)
+wmc (52 in class, 27 out of class)
+rita (20 in class, 3 out of class)
+schiavo (16 in class, 0 out of class)
+
+Most indicative words for class 2006:
+
+alkatiri (49 in class, 3 out of class)
+awb (335 in class, 134 out of class)
+kovco (106 in class, 34 out of class)
+dili (81 in class, 26 out of class)
+abcnews (30 in class, 2 out of class)
+monica (44 in class, 13 out of class)
+glenda (18 in class, 0 out of class)
+smut (42 in class, 19 out of class)
+mutijulu (18 in class, 1 out of class)
+kovcos (21 in class, 4 out of class)
+
+Most indicative words for class 2007:
+
+auspine (85 in class, 14 out of class)
+haneef (225 in class, 87 out of class)
+workchoices (124 in class, 51 out of class)
+tristar (27 in class, 1 out of class)
+hilali (24 in class, 0 out of class)
+banton (29 in class, 4 out of class)
+pasha (49 in class, 16 out of class)
+bulker (36 in class, 9 out of class)
+woolmer (60 in class, 26 out of class)
+haneefs (28 in class, 6 out of class)
+
+Most indicative words for class 2008:
+
+wyd (69 in class, 0 out of class)
+fuelwatch (58 in class, 6 out of class)
+gustav (27 in class, 0 out of class)
+ike (28 in class, 1 out of class)
+mccain (136 in class, 68 out of class)
+tibet (109 in class, 52 out of class)
+lapthorne (23 in class, 5 out of class)
+palin (48 in class, 26 out of class)
+torch (135 in class, 103 out of class)
+beechwood (16 in class, 1 out of class)
+
+Most indicative words for class 2009:
+
+swine (659 in class, 52 out of class)
+ozcar (30 in class, 0 out of class)
+said (364 in class, 164 out of class)
+ets (129 in class, 52 out of class)
+chinalco (27 in class, 4 out of class)
+timbercorp (47 in class, 17 out of class)
+kinglake (33 in class, 9 out of class)
+stimulus (263 in class, 168 out of class)
+copenhagen (50 in class, 25 out of class)
+slumdog (21 in class, 9 out of class)
+
+Most indicative words for class 2010:
+
+insulation (132 in class, 88 out of class)
+ber (26 in class, 7 out of class)
+haiti (147 in class, 141 out of class)
+avatar (22 in class, 11 out of class)
+wikileaks (95 in class, 93 out of class)
+shirts (33 in class, 24 out of class)
+mackillop (37 in class, 30 out of class)
+delhi (113 in class, 119 out of class)
+vancouver (22 in class, 13 out of class)
+fea (15 in class, 6 out of class)
+
+Most indicative words for class 2011:
+
+gaddafi (178 in class, 42 out of class)
+regs (36 in class, 4 out of class)
+yasi (87 in class, 36 out of class)
+sloan (30 in class, 4 out of class)
+gaddafis (35 in class, 9 out of class)
+kronic (22 in class, 1 out of class)
+libyan (135 in class, 75 out of class)
+occupy (59 in class, 31 out of class)
+tripoli (32 in class, 14 out of class)
+lapkin (15 in class, 1 out of class)
+
+Most indicative words for class 2012:
+
+romney (175 in class, 22 out of class)
+schubert (141 in class, 34 out of class)
+mitt (29 in class, 4 out of class)
+varischetti (123 in class, 62 out of class)
+santorum (21 in class, 2 out of class)
+dynasties (19 in class, 1 out of class)
+hsu (65 in class, 37 out of class)
+brann (64 in class, 38 out of class)
+roocke (23 in class, 6 out of class)
+gingrich (24 in class, 8 out of class)
+
+Most indicative words for class 2013:
+
+ninety (92 in class, 15 out of class)
+nx (38 in class, 2 out of class)
+adm (33 in class, 2 out of class)
+tyne (32 in class, 7 out of class)
+mcconnon (30 in class, 6 out of class)
+seconds (90 in class, 46 out of class)
+disabilitycare (20 in class, 0 out of class)
+dist (42 in class, 15 out of class)
+zygier (18 in class, 0 out of class)
+buildplan (17 in class, 0 out of class)
+
+Most indicative words for class 2014:
+
+sochi (93 in class, 6 out of class)
+ebola (294 in class, 87 out of class)
+ita (47 in class, 11 out of class)
+glasgow (67 in class, 26 out of class)
+gabsi (28 in class, 4 out of class)
+crimea (32 in class, 8 out of class)
+rolf (71 in class, 34 out of class)
+jokowi (21 in class, 1 out of class)
+fofa (16 in class, 0 out of class)
+greste (73 in class, 51 out of class)
+
+Most indicative words for class 2015:
+
+marcia (70 in class, 10 out of class)
+germanwings (40 in class, 1 out of class)
+pam (57 in class, 10 out of class)
+heydon (31 in class, 1 out of class)
+sukumaran (40 in class, 8 out of class)
+sepp (36 in class, 8 out of class)
+lucille (31 in class, 7 out of class)
+huddle (24 in class, 3 out of class)
+turnbull's (18 in class, 1 out of class)
+mers (19 in class, 2 out of class)
+
+Most indicative words for class 2016:
+
+zika (99 in class, 2 out of class)
+duterte (68 in class, 7 out of class)
+brexit (191 in class, 48 out of class)
+aleppo (127 in class, 39 out of class)
+pokemon (41 in class, 4 out of class)
+plebiscite (61 in class, 14 out of class)
+yarloop (58 in class, 14 out of class)
+rodrigo (33 in class, 5 out of class)
+egyptair (25 in class, 1 out of class)
+culleton (40 in class, 12 out of class)
+
+Most indicative words for class 2017:
+
+scorecentre (99 in class, 0 out of class)
+debbie (116 in class, 20 out of class)
+aflw (41 in class, 0 out of class)
+macron (38 in class, 0 out of class)
+comey (39 in class, 1 out of class)
+oakden (33 in class, 2 out of class)
+theresa (34 in class, 10 out of class)
+nam (24 in class, 6 out of class)
+chatline (14 in class, 0 out of class)
+tillerson (15 in class, 2 out of class)
+
+
+
+Oracle: me.mostly.ml.test.headline.FirstChronoHalf@195cb879
+Classifier: {false=me.mostly.ml.WordBagModel@4457fec, true=me.mostly.ml.WordBagModel@28953549}
+
+Actual prevalence:                        0.4947281850356229 (RealPos/Total)
+
+=== RESULTS ===
+True positives (TP):                      39742
+False positives (FP):                     17632
+False negatives (FN):                     13796
+True negatives (TN):                      37047
+
+=== DESIRABLE STATS (0 to 1) ===
+Accuracy:                                 0.7095835219974681 (accuracy=(TP+TN)/Total)
+True positive rate (Recall, Sensitivity): 0.7423138705218724 (TPR=TP/RealPos)
+True negative rate (Specificity):         0.6775361656211708 (TNR=TN/RealNeg)
+Positive predictive value (Precision):    0.6926830968731481 (PPV=TP/PredictedPos)
+Negative predictive value:                0.72865487874437 (NPV=TN/PredictedNeg)
+Area under convex hull ROC curve:         0.7099250180715215 (area=(TPR+TNR)/2)
+F1 score:                                 0.7166402192729371 (F1=2/(1/TPR + 1/PPV))
+F1 score (negative condition):            0.7021663728890657 (F1=2/(1/TNR + 1/NPV))
+
+=== UNDESIRABLE STATS (0 to 1) ===
+Inaccuracy:                               0.29041647800253195 (inaccuracy=(FP+FN)/Total)
+False positive rate (Fallout):            0.32246383437882914 (FPR=FP/RealNeg)
+False negative rate (Miss rate):          0.2576861294781277 (FNR=FN/RealPos)
+False discovery rate (False alarm):       0.3073169031268519 (FDR=FP/PredictedPos)
+False omission rate:                      0.2713451212556301 (FOR=FN/PredictedNeg)
+
+=== DESCRIPTIVE STATS (0 to inf) ===
+Positive likelihood ratio (high better):  2.302006586108522 (LR+=TPR/FPR)
+Negative likelihood ratio (low better):   0.3803282282974207 (LR-=FNR/TNR)
+Diagnostic odds ratio (high better):      6.052684010370981 (DOR=LR+/LR-)
+
+
+Most indicative words for class false:
+
+nrn (1807 in class, 0 out of class)
+csg (772 in class, 0 out of class)
+myanmar (303 in class, 0 out of class)
+australia's (285 in class, 0 out of class)
+ndis (267 in class, 0 out of class)
+kyrgios (254 in class, 0 out of class)
+brexit (239 in class, 0 out of class)
+assange (237 in class, 0 out of class)
+gonski (227 in class, 0 out of class)
+fracking (222 in class, 0 out of class)
+
+Most indicative words for class true:
+
+kovco (140 in class, 0 out of class)
+sorenstam (130 in class, 0 out of class)
+hardenne (111 in class, 0 out of class)
+debnam (106 in class, 0 out of class)
+auspine (99 in class, 0 out of class)
+sars (492 in class, 4 out of class)
+vaile (292 in class, 2 out of class)
+zarqawi (96 in class, 0 out of class)
+najaf (90 in class, 0 out of class)
+hih (88 in class, 0 out of class)
+
+
+
+Oracle: me.mostly.ml.test.headline.Weekend@5d113435
+Classifier: {false=me.mostly.ml.WordBagModel@2172d09e, true=me.mostly.ml.WordBagModel@ee76143}
+
+Actual prevalence:                        0.15100215308130885 (RealPos/Total)
+
+=== RESULTS ===
+True positives (TP):                      5519
+False positives (FP):                     9129
+False negatives (FN):                     10822
+True negatives (TN):                      82747
+
+=== DESIRABLE STATS (0 to 1) ===
+Accuracy:                                 0.8156389476699595 (accuracy=(TP+TN)/Total)
+True positive rate (Recall, Sensitivity): 0.3377394284315525 (TPR=TP/RealPos)
+True negative rate (Specificity):         0.9006378161870346 (TNR=TN/RealNeg)
+Positive predictive value (Precision):    0.3767749863462589 (PPV=TP/PredictedPos)
+Negative predictive value:                0.8843420363581955 (NPV=TN/PredictedNeg)
+Area under convex hull ROC curve:         0.6191886223092936 (area=(TPR+TNR)/2)
+F1 score:                                 0.356190906450676 (F1=2/(1/TPR + 1/PPV))
+F1 score (negative condition):            0.8924155409959826 (F1=2/(1/TNR + 1/NPV))
+
+=== UNDESIRABLE STATS (0 to 1) ===
+Inaccuracy:                               0.18436105233004058 (inaccuracy=(FP+FN)/Total)
+False positive rate (Fallout):            0.0993621838129653 (FPR=FP/RealNeg)
+False negative rate (Miss rate):          0.6622605715684474 (FNR=FN/RealPos)
+False discovery rate (False alarm):       0.6232250136537412 (FDR=FP/PredictedPos)
+False omission rate:                      0.11565796364180445 (FOR=FN/PredictedNeg)
+
+=== DESCRIPTIVE STATS (0 to inf) ===
+Positive likelihood ratio (high better):  3.3990741293216473 (LR+=TPR/FPR)
+Negative likelihood ratio (low better):   0.7353239667108497 (LR-=FNR/TNR)
+Diagnostic odds ratio (high better):      4.622553164594811 (DOR=LR+/LR-)
+
+
+Most indicative words for class false:
+
+nrn (1804 in class, 3 out of class)
+sach (427 in class, 0 out of class)
+wimmera (402 in class, 0 out of class)
+ntch (368 in class, 0 out of class)
+saleyards (333 in class, 0 out of class)
+aired (591 in class, 1 out of class)
+jericho (227 in class, 0 out of class)
+qch (208 in class, 0 out of class)
+kohler (417 in class, 1 out of class)
+menindee (197 in class, 0 out of class)
+
+Most indicative words for class true:
+
+newsmakers (21 in class, 0 out of class)
+sthalekar (8 in class, 0 out of class)
+inquisition (77 in class, 8 out of class)
+offsiders (55 in class, 6 out of class)
+dibaba (7 in class, 0 out of class)
+zanu (6 in class, 0 out of class)
+bulgarias (6 in class, 0 out of class)
+preakness (5 in class, 0 out of class)
+consign (5 in class, 0 out of class)
+wef (5 in class, 0 out of class)
+
+
+
+Oracle: me.mostly.ml.test.headline.AusNatlElectionProximate@5dea04f
+Classifier: {false=me.mostly.ml.WordBagModel@41fe6103, true=me.mostly.ml.WordBagModel@1dca8451}
+
+Actual prevalence:                        0.07485884842492399 (RealPos/Total)
+
+=== RESULTS ===
+True positives (TP):                      220
+False positives (FP):                     1109
+False negatives (FN):                     7881
+True negatives (TN):                      99007
+
+=== DESIRABLE STATS (0 to 1) ===
+Accuracy:                                 0.9169261761091141 (accuracy=(TP+TN)/Total)
+True positive rate (Recall, Sensitivity): 0.027157141093692137 (TPR=TP/RealPos)
+True negative rate (Specificity):         0.9889228494945863 (TNR=TN/RealNeg)
+Positive predictive value (Precision):    0.1655379984951091 (PPV=TP/PredictedPos)
+Negative predictive value:                0.9262686176184417 (NPV=TN/PredictedNeg)
+Area under convex hull ROC curve:         0.5080399952941392 (area=(TPR+TNR)/2)
+F1 score:                                 0.04665959703075292 (F1=2/(1/TPR + 1/PPV))
+F1 score (negative condition):            0.9565708875190818 (F1=2/(1/TNR + 1/NPV))
+
+=== UNDESIRABLE STATS (0 to 1) ===
+Inaccuracy:                               0.08307382389088591 (inaccuracy=(FP+FN)/Total)
+False positive rate (Fallout):            0.01107715050541372 (FPR=FP/RealNeg)
+False negative rate (Miss rate):          0.9728428589063078 (FNR=FN/RealPos)
+False discovery rate (False alarm):       0.8344620015048909 (FDR=FP/PredictedPos)
+False omission rate:                      0.07373138238155827 (FOR=FN/PredictedNeg)
+
+=== DESCRIPTIVE STATS (0 to inf) ===
+Positive likelihood ratio (high better):  2.451636012386007 (LR+=TPR/FPR)
+Negative likelihood ratio (low better):   0.983739893767753 (LR-=FNR/TNR)
+Diagnostic odds ratio (high better):      2.4921587788781934 (DOR=LR+/LR-)
+
+
+Most indicative words for class false:
+
+trump (1466 in class, 2 out of class)
+april (889 in class, 1 out of class)
+streaming (432 in class, 0 out of class)
+ebola (381 in class, 0 out of class)
+brexit (239 in class, 0 out of class)
+romney (197 in class, 0 out of class)
+weatherill (196 in class, 0 out of class)
+uber (188 in class, 0 out of class)
+varischetti (185 in class, 0 out of class)
+obamas (181 in class, 0 out of class)
+
+Most indicative words for class true:
+
+pileggi (12 in class, 0 out of class)
+guba (9 in class, 0 out of class)
+baddies (4 in class, 0 out of class)
+utor (4 in class, 0 out of class)
+aod (4 in class, 0 out of class)
+rspt (4 in class, 0 out of class)
+bindeez (9 in class, 1 out of class)
+krosa (4 in class, 0 out of class)
+bigley (4 in class, 0 out of class)
+middletons (23 in class, 4 out of class)
+
+
+
+Oracle: me.mostly.ml.test.headline.LaborPM@70030eed
+Classifier: {false=me.mostly.ml.WordBagModel@2f047a, true=me.mostly.ml.WordBagModel@326b9b05}
+
+Actual prevalence:                        0.4374543740817062 (RealPos/Total)
+
+=== RESULTS ===
+True positives (TP):                      24504
+False positives (FP):                     15252
+False negatives (FN):                     22836
+True negatives (TN):                      45625
+
+=== DESIRABLE STATS (0 to 1) ===
+Accuracy:                                 0.6480405111950988 (accuracy=(TP+TN)/Total)
+True positive rate (Recall, Sensitivity): 0.517617237008872 (TPR=TP/RealPos)
+True negative rate (Specificity):         0.7494620299949077 (TNR=TN/RealNeg)
+Positive predictive value (Precision):    0.6163597947479625 (PPV=TP/PredictedPos)
+Negative predictive value:                0.6664378259154847 (NPV=TN/PredictedNeg)
+Area under convex hull ROC curve:         0.6335396335018899 (area=(TPR+TNR)/2)
+F1 score:                                 0.56268944612841 (F1=2/(1/TPR + 1/PPV))
+F1 score (negative condition):            0.7055157803584405 (F1=2/(1/TNR + 1/NPV))
+
+=== UNDESIRABLE STATS (0 to 1) ===
+Inaccuracy:                               0.35195948880490124 (inaccuracy=(FP+FN)/Total)
+False positive rate (Fallout):            0.25053797000509226 (FPR=FP/RealNeg)
+False negative rate (Miss rate):          0.48238276299112803 (FNR=FN/RealPos)
+False discovery rate (False alarm):       0.3836402052520374 (FDR=FP/PredictedPos)
+False omission rate:                      0.3335621740845153 (FOR=FN/PredictedNeg)
+
+=== DESCRIPTIVE STATS (0 to inf) ===
+Positive likelihood ratio (high better):  2.066023114174475 (LR+=TPR/FPR)
+Negative likelihood ratio (low better):   0.6436386950709239 (LR-=FNR/TNR)
+Diagnostic odds ratio (high better):      3.2099112902881264 (DOR=LR+/LR-)
+
+
+Most indicative words for class false:
+
+brexit (239 in class, 0 out of class)
+fallujah (220 in class, 0 out of class)
+verrender (141 in class, 0 out of class)
+hardenne (111 in class, 0 out of class)
+debnam (106 in class, 0 out of class)
+zika (101 in class, 0 out of class)
+scorecentre (99 in class, 0 out of class)
+sars (492 in class, 4 out of class)
+zarqawi (96 in class, 0 out of class)
+uber (187 in class, 1 out of class)
+
+Most indicative words for class true:
+
+varischetti (185 in class, 0 out of class)
+swine (703 in class, 8 out of class)
+wyd (69 in class, 0 out of class)
+honan (67 in class, 0 out of class)
+fev (58 in class, 0 out of class)
+healthwatch (56 in class, 0 out of class)
+alcopops (44 in class, 0 out of class)
+opes (43 in class, 0 out of class)
+sica (40 in class, 0 out of class)
+romney (193 in class, 4 out of class)
+
+Process finished with exit code 0

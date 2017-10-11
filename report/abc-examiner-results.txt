@@ -1,0 +1,111 @@
+"C:\Program Files\Java\jdk1.8.0_111\bin\java" -Dvisualvm.id=583155014208841 -Xmx6000M -Dvisualvm.id=583151226416020 "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\lib\idea_rt.jar=59517:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_111\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\rt.jar;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\out\production\BasicClassifier" me.mostly.ml.test.headline.Main headline-data/abc1.csv headline-data/abc2.csv headline-data/examiner1.csv headline-data/examiner2.csv headline-data/examiner3.csv headline-data/examiner4.csv headline-data/examiner5.csv
+Read 100000 lines
+Read 200000 lines
+Read 300000 lines
+Read 400000 lines
+Read 500000 lines
+Read 600000 lines
+Read 700000 lines
+Loaded headline-data\abc1.csv
+Read 100000 lines
+Read 200000 lines
+Read 300000 lines
+Loaded headline-data\abc2.csv
+Read 100000 lines
+Read 200000 lines
+Read 300000 lines
+Read 400000 lines
+Read 500000 lines
+Read 600000 lines
+Read 700000 lines
+Loaded headline-data\examiner1.csv
+Read 100000 lines
+Read 200000 lines
+Read 300000 lines
+Read 400000 lines
+Read 500000 lines
+Read 600000 lines
+Read 700000 lines
+Loaded headline-data\examiner2.csv
+Read 100000 lines
+Read 200000 lines
+Read 300000 lines
+Read 400000 lines
+Read 500000 lines
+Read 600000 lines
+Read 700000 lines
+Loaded headline-data\examiner3.csv
+Read 100000 lines
+Read 200000 lines
+Read 300000 lines
+Read 400000 lines
+Read 500000 lines
+Read 600000 lines
+Read 700000 lines
+Loaded headline-data\examiner4.csv
+Loaded headline-data\examiner5.csv
+Data read.
+
+
+
+Oracle: me.mostly.ml.test.headline.Crowdsourced@2f893a20
+Classifier: {false=me.mostly.ml.WordBagModel@2d4a6b57, true=me.mostly.ml.WordBagModel@b032f86}
+
+Actual prevalence:                        0.7415493329114592 (RealPos/Total)
+
+=== RESULTS ===
+True positives (TP):                      294295
+False positives (FP):                     13711
+False negatives (FN):                     15069
+True negatives (TN):                      94111
+
+=== DESIRABLE STATS (0 to 1) ===
+Accuracy:                                 0.9310139841701304 (accuracy=(TP+TN)/Total)
+True positive rate (Recall, Sensitivity): 0.9512903893148524 (TPR=TP/RealPos)
+True negative rate (Specificity):         0.8728367123592587 (TNR=TN/RealNeg)
+Positive predictive value (Precision):    0.9554846334162321 (PPV=TP/PredictedPos)
+Negative predictive value:                0.8619802161568053 (NPV=TN/PredictedNeg)
+Area under convex hull ROC curve:         0.9120635508370556 (area=(TPR+TNR)/2)
+F1 score:                                 0.9533828984239598 (F1=2/(1/TPR + 1/PPV))
+F1 score (negative condition):            0.8673744942442926 (F1=2/(1/TNR + 1/NPV))
+
+=== UNDESIRABLE STATS (0 to 1) ===
+Inaccuracy:                               0.06898601582986966 (inaccuracy=(FP+FN)/Total)
+False positive rate (Fallout):            0.12716328764074122 (FPR=FP/RealNeg)
+False negative rate (Miss rate):          0.04870961068514759 (FNR=FN/RealPos)
+False discovery rate (False alarm):       0.04451536658376785 (FDR=FP/PredictedPos)
+False omission rate:                      0.13801978384319472 (FOR=FN/PredictedNeg)
+
+=== DESCRIPTIVE STATS (0 to inf) ===
+Positive likelihood ratio (high better):  7.480857148034864 (LR+=TPR/FPR)
+Negative likelihood ratio (low better):   0.055806097515635616 (LR-=FNR/TNR)
+Diagnostic odds ratio (high better):      134.05089194668906 (DOR=LR+/LR-)
+
+
+Most indicative words for class false:
+
+qld (10447 in class, 0 out of class)
+nsw (11312 in class, 4 out of class)
+nrn (1824 in class, 0 out of class)
+australias (1622 in class, 0 out of class)
+bendigo (1489 in class, 0 out of class)
+townsville (1166 in class, 0 out of class)
+gippsland (1146 in class, 0 out of class)
+bikie (1013 in class, 0 out of class)
+aust (2979 in class, 2 out of class)
+bushfire (2962 in class, 2 out of class)
+
+Most indicative words for class true:
+
+year-old (5292 in class, 0 out of class)
+ncaa (3923 in class, 0 out of class)
+mom (9678 in class, 2 out of class)
+spoilers (12724 in class, 3 out of class)
+rumors (5882 in class, 1 out of class)
+dwts (2853 in class, 0 out of class)
+honors (2744 in class, 0 out of class)
+dlc (2585 in class, 0 out of class)
+gluten-free (2546 in class, 0 out of class)
+moms (2517 in class, 0 out of class)
+
+Process finished with exit code 0
