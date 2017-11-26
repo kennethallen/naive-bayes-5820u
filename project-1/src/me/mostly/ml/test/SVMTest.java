@@ -6,9 +6,7 @@ import me.mostly.ml.SVMClassifier;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.IntStream;
 
 public class SVMTest {
 
@@ -31,19 +29,13 @@ public class SVMTest {
             @Override
             public String toString() {
                 return super.toString() + "\nEquivalent w: " + data.stream()
-                        .map(e -> new Point(e.entry.x*e.signedAlpha(), e.entry.y*e.signedAlpha(), false))
+                        .map(e -> new Point(e.datum.x*e.signedAlpha(), e.datum.y*e.signedAlpha(), false))
                         .reduce(new Point(0, 0, false), (p1, p2) -> new Point(p1.x + p2.x, p1.y + p2.y, false));
             }
         };
 
         System.out.println(classifier);
-        for (int i = 0; i < 1000000; i++) {
-            classifier.step(100);
-            if (i % 10000 == 0) {
-                System.out.println();
-                System.out.println("After " + i + "th iteration: " + classifier);
-            }
-        }
+        classifier.optimize(1, 0.001);
 
 //        System.out.println();
 //        Arrays.asList(
