@@ -72,8 +72,6 @@ public class Main {
         final ArrayList<Headline> headlines = new ArrayList<>();
         final String source = sourceForFilename(file.getName());
 
-
-
         try (final BufferedReader br = new BufferedReader(new FileReader(file))) {
             final Calendar cal = Calendar.getInstance();
 
