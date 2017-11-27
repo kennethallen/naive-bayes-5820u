@@ -32,10 +32,10 @@ hs_err_pid*
 *.synctex.gz
 
 # NetBeans
-build
-build.xml
-nbproject
-manifest.mf
+/*/build
+/*/build.xml
+/*/nbproject
+/*/manifest.mf
 
 # LibreOffice lock files
 .~lock.*
