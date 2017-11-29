@@ -41,10 +41,7 @@ public class Discretizer {
         ArrayList<ArrayList<Integer>> rList = new ArrayList<>();
         ArrayList<Double> gains = new ArrayList<>();
         ArrayList<String> namesTemp = new ArrayList<>();
-        ArrayList<ArrayList<Integer>> b = new ArrayList<>(); //holds values from a which can be removed
-        for (int i = 0; i < a.size(); i++) {
-            b.add(a.get(i));
-        }
+        ArrayList<ArrayList<Integer>> b = new ArrayList<>(a); //holds values from a which can be removed
 
         for (int i = 0; i < a.size() - 1; i++) {
             gains.add(getEntropy(a.get(a.size() - 1)) - getGain(a.get(a.size() - 1), a.get(i)));
@@ -63,9 +60,7 @@ public class Discretizer {
         }
 
         names.clear(); //clears and adds names of top 10
-        for (int i = 0; i < namesTemp.size(); i++) {
-            names.add(namesTemp.get(i));
-        }
+        names.addAll(namesTemp);
 
         return rList;
 

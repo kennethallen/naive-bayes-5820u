@@ -1,8 +1,8 @@
-package re;
-
-import libsvm.svm_node;
+package me.mostly.ml.test.sp500;
 
 import java.util.stream.IntStream;
+
+import libsvm.svm_node;
 
 public class Stock {
 
@@ -20,7 +20,6 @@ public class Stock {
 
     public svm_node[] libSvmFormat(final int start, final int end) {
         return IntStream.range(start, end)
-                .filter(idx -> returns[idx] != 0)
                 .mapToObj(idx -> {
                     final svm_node node = new svm_node();
                     node.index = idx;

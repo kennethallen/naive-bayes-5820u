@@ -1,7 +1,9 @@
-package me.mostly.ml;
+package me.mostly.ml.svm_experimental;
+
+import me.mostly.ml.BinaryClassifier;
+import me.mostly.ml.Classifier;
 
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.ToDoubleBiFunction;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;

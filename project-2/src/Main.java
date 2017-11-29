@@ -2,7 +2,12 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import libsvm.*;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -12,19 +17,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException, IOException {
+    public static void main(final String[] args) throws FileNotFoundException, IOException {
 
-        int choice = 0, classes = 2; //0 = sp500 1 = drought if SP500 then classes = 3
-        //----------------------input data start--------------------------------
         ArrayList<ArrayList<XSSFCell>> cells = new ArrayList<>();
         ArrayList<ArrayList<Double>> data = new ArrayList<>(); //stores inputs
 
-        File myFile;
-        if (choice == 0) {
-            myFile = new File("data/ReturnsFull.xlsx");
-        } else {
-            myFile = new File("data/DroughtData.xlsx");
-        }
+        File myFile = new File("data/ReturnsFull.xlsx");
         FileInputStream fis = new FileInputStream(myFile);
 
         XSSFWorkbook wb = new XSSFWorkbook(fis);
@@ -33,8 +31,7 @@ public class Main {
         XSSFRow row;
         XSSFCell cell = null;
 
-        int rows; // No of rows
-        rows = sheet.getPhysicalNumberOfRows();
+        int rows = sheet.getPhysicalNumberOfRows();
 
         System.out.println("rows = " + rows);
         int cols = 0; // No of columns
@@ -57,7 +54,7 @@ public class Main {
 
         System.out.println("rows 2: " + rows);
         System.out.println("cols: " + cols);
-        for (int r = 0; r < rows * 2; r++) { //*2 to fix halfing problem
+        for (int r = 0; r < rows * 2; r++) { //*2 to fix halving problem
             row = sheet.getRow(r);
             if (row != null) {
                 for (int c = 0; c < cols; c++) {
@@ -86,41 +83,29 @@ public class Main {
         //-------------------input data end-------------------------------------
         System.out.println("all rows contain n = : " + data.get(0).size());
 
-        ArrayList<ArrayList<Double>> sets;
-        ArrayList<Double> c;
-        if (choice == 0) {
-            ArrayList<ArrayList<Integer>> disValues = new ArrayList<>(); //holds dis_values
-            for (int i = 0; i < data.size(); i++) { //adds entire data set into discretizer
-                disValues.add(Discretizer.disData(data.get(i)));
-            }
-            ArrayList<String> namesTemp = new ArrayList<>();
-            for (int i = 0; i < names.size(); i++) {
-                namesTemp.add(names.get(i));
-            }
-            Discretizer.getTop10(disValues, namesTemp); //top 10 gains
+//        List<ArrayList<Integer>> disValues = data.stream().map(Discretizer::disData).collect(Collectors.toList());
+        ArrayList<ArrayList<Double>> disValues = data;
 
-            System.out.println(namesTemp.size() + " sets chosen based on gains");
+//        ArrayList<String> namesTemp = new ArrayList<>(names);
+//        Discretizer.getTop10(disValues, namesTemp); //top 10 gains
+//
+//        System.out.println(namesTemp.size() + " sets chosen based on gains");
+//
+//        ArrayList<ArrayList<Double>> sets = new ArrayList<>(); //holds dis_values
+//        for (int i = 0; i < namesTemp.size(); i++) {
+//            int v = names.indexOf(namesTemp.get(i));
+//            sets.add(data.get(v));
+//            Collections.reverse(sets.get(i));
+//        }
+        final ArrayList<ArrayList<Double>> sets = data;
 
-            sets = new ArrayList<>(); //holds dis_values
-            for (int i = 0; i < namesTemp.size(); i++) {
-                int v = names.indexOf(namesTemp.get(i));
-                sets.add(data.get(v));
-                flip(sets.get(i));
-            }
-            c = new ArrayList<>();
-            for (int i = 0; i < disValues.get(disValues.size() - 1).size(); i++) {
-                c.add((double) disValues.get(disValues.size() - 1).get(i));
-            }
-            //flip(c);
-            c.add(0.0);
-        } else {
-            sets = new ArrayList<>(); //holds dis_values
-            for (int i = 0; i < data.size() - 1; i++) {
-
-                sets.add(data.get(i));
-            }
-            c = data.get(data.size() - 1);
-        }
+//        ArrayList<Double> c = new ArrayList<>();
+//        for (int i = 0; i < disValues.get(disValues.size() - 1).size(); i++) {
+//            c.add((double) disValues.get(disValues.size() - 1).get(i));
+//        }
+        final ArrayList<Double> c = disValues.get(disValues.size() - 1);
+        //flip(c);
+        c.add(0.0);
         System.out.println("C: " + c.size());
         System.out.println("Final data set size: " + sets.size());
 
@@ -132,56 +117,7 @@ public class Main {
         double[][] train = new double[trainN - testN][];
         double[][] test = new double[testN][];
 
-        /*int n = 0;
-        for (int i = 0; i < sets.size(); i++) {
-            for (int j = testN; j < trainN; j++) {
-                if (sets.get(i).get(j) >= sets.get(i).get(j - 1)) {
-                    double[] vals = {c.get(j), n, sets.get(i).get(j)};
-                    train[n++] = vals;
-                } else {
-                    double[] vals = {c.get(j), -n, -sets.get(i).get(j)};
-                    train[n++] = vals;
-                }
-            }
-        }
-        n = 0;
-        for (int i = 0; i < sets.size(); i++) {
-            for (int j = 1; j < testN; j++) {
-                if (sets.get(i).get(j) >= sets.get(i).get(j - 1)) {
-                    double[] vals = {c.get(j), n, sets.get(i).get(j) + train.length};
-                    test[n++] = vals;
-                } else {
-                    double[] vals = {c.get(j), -n, -sets.get(i).get(j)};
-                    test[n++] = vals;
-                }
-            }
-        }
-        int n = 0;
-        for (int i = 0; i < sets.size(); i++) {
-            for (int j = 0; j < testN; j++) {
-                if (c.get(j) == 0.0) {
-                    double[] vals = {c.get(j), n, sets.get(i).get(j)};
-                    test[n++] = vals;
-                } else {
-                    double[] vals = {c.get(j), -n, -sets.get(i).get(j)};
-                    test[n++] = vals;
-                }
-            }
-        }
-        n = 0;
-        for (int i = 0; i < sets.size(); i++) {
-            for (int j = testN; j < trainN; j++) {
-                if (c.get(j) == 0.0) {
-                    double[] vals = {c.get(j), n, sets.get(i).get(j)};
-                    train[n++] = vals;
-                } else {
-                    double[] vals = {c.get(j), -n, -sets.get(i).get(j)};
-                    train[n++] = vals;
-                }
-            }
-        }*/
-        int n = 0;
-        for (int i = testN; i < sets.get(0).size(); i++) {
+        for (int i = testN, n = 0; i < sets.get(0).size(); i++) {
             double[] vals = new double[sets.size()];
             vals[0] = c.get(i);
             for (int j = 1; j < sets.size(); j++) {
@@ -191,8 +127,7 @@ public class Main {
             train[n++] = vals;
         }
 
-        n = 0;
-        for (int i = 0; i < testN; i++) {
+        for (int i = 0, n = 0; i < testN; i++) {
             double[] vals = new double[sets.size()];
             vals[0] = c.get(i);
             for (int j = 1; j < sets.size(); j++) {
@@ -208,7 +143,7 @@ public class Main {
         System.out.println("Training complete..");
         double count = 0;
         for (int i = 0; i < test.length; i++) {
-            count += evaluate(test[i], s, classes);
+            count += evaluate(test[i], s, 2);
         }
         System.out.println("The total accuracy: " + (Double) (count / test.length));
     }
@@ -242,12 +177,10 @@ public class Main {
         param.cache_size = 20000;
         param.eps = 0.001;
 
-        svm_model model = svm.svm_train(prob, param);
-
-        return model;
+        return svm.svm_train(prob, param);
     }
 
-    public static double evaluate(double[] features, svm_model model, int c) {
+    public static double evaluate(final double[] features, final svm_model model, final int totalClasses) {
         svm_node[] nodes = new svm_node[features.length - 1];
         for (int i = 1; i < features.length; i++) {
             svm_node node = new svm_node();
@@ -257,33 +190,17 @@ public class Main {
             nodes[i - 1] = node;
         }
 
-        int totalClasses = c;
-        int[] labels = new int[totalClasses];
+        final int[] labels = new int[totalClasses];
         svm.svm_get_labels(model, labels);
 
-        double[] prob_estimates = new double[totalClasses];
-        double v = svm.svm_predict_probability(model, nodes, prob_estimates);
+        final double[] prob_estimates = new double[totalClasses];
+        final double v = svm.svm_predict_probability(model, nodes, prob_estimates);
 
         for (int i = 0; i < totalClasses; i++) {
             System.out.print("(" + labels[i] + ":" + prob_estimates[i] + ")");
         }
         System.out.println("(Actual:" + features[0] + " Prediction:" + v + ")");
 
-        if (features[0] == v) {
-            return 1.0;
-        }
-        return 0.0;
-    }
-
-    //tested OK Aug 20, 2017
-    public static void flip(ArrayList<Double> data) {
-        ArrayList<Double> temp = new ArrayList<>();
-        for (int i = 0; i < data.size(); i++) {
-            temp.add(data.get(i));
-        }
-        data.clear();
-        for (int i = temp.size() - 1; i >= 0; i--) {
-            data.add(temp.get(i));
-        }
+        return features[0] == v ? 1.0 : 0.0;
     }
 }

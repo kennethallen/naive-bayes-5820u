@@ -1,7 +1,6 @@
-package me.mostly.ml.test;
+package me.mostly.ml.svm_experimental;
 
 import me.mostly.ml.BinaryClassifier;
-import me.mostly.ml.SVMClassifier;
 
 import java.util.Arrays;
 import java.util.List;
