@@ -14,7 +14,7 @@ public class WordBag {
 
     public static final Set<String> STOP_WORDS = new HashSet<>();
     static {
-        try (final BufferedReader br = new BufferedReader(new FileReader("stopwords.txt"))) {
+        try (final BufferedReader br = new BufferedReader(new FileReader("data/stopwords.txt"))) {
             String word;
             while ((word = br.readLine()) != null)
                 STOP_WORDS.add(word);
