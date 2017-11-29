@@ -1,6 +1,7 @@
 package me.mostly.ml;
 
 import libsvm.*;
+import me.mostly.ml.test.sp500.LabeledParams;
 
 import java.util.*;
 import java.util.function.Function;
@@ -9,14 +10,30 @@ import java.util.stream.Collectors;
 public class LibSVMClassifier<E> implements BinaryClassifier<E> {
 
     final svm_model model;
+    final svm_parameter param;
     final int[] labels = new int[2];
     final Function<? super E, svm_node[]> featureExtractor;
 
     public LibSVMClassifier(final svm_parameter param, final Function<? super E, svm_node[]> featureExtractor,
                             final Collection<? extends E> train, final BinaryClassifier<? super E> oracle) {
-        this.featureExtractor = featureExtractor;
+        this(param, featureExtractor, createProblem(featureExtractor, train, oracle));
+    }
 
-        // Setup training data for LibSVM.
+    public LibSVMClassifier(final svm_parameter param, final Function<? super E, svm_node[]> featureExtractor,
+                            final svm_problem prob) {
+        this.featureExtractor = featureExtractor;
+        this.param = param;
+
+        // Train model.
+        Optional.ofNullable(svm.svm_check_parameter(prob, param)).ifPresent(message -> {
+            throw new IllegalArgumentException("Parameter problem: " + message);
+        });
+        model = svm.svm_train(prob, param);
+        svm.svm_get_labels(model, this.labels);
+    }
+
+    public static <E> svm_problem createProblem(final Function<? super E, svm_node[]> featureExtractor,
+                                            final Collection<? extends E> train, final BinaryClassifier<? super E> oracle) {
         final List<? extends Map.Entry<E, Boolean>> labeledTrainers = train.stream()
                 .map(e -> new AbstractMap.SimpleImmutableEntry<>(e, oracle.classify(e)))
                 .filter(entry -> entry.getValue().isPresent())
@@ -27,13 +44,7 @@ public class LibSVMClassifier<E> implements BinaryClassifier<E> {
         prob.l = labeledTrainers.size();
         prob.x = labeledTrainers.stream().map(Map.Entry::getKey).map(featureExtractor).toArray(svm_node[][]::new);
         prob.y = labeledTrainers.stream().map(Map.Entry::getValue).mapToDouble(b -> b ? 1 : 0).toArray();
-
-        // Train model.
-        Optional.ofNullable(svm.svm_check_parameter(prob, param)).ifPresent(message -> {
-            throw new IllegalArgumentException("Parameter problem: " + message);
-        });
-        model = svm.svm_train(prob, param);
-        svm.svm_get_labels(model, this.labels);
+        return prob;
     }
 
     @Override
@@ -41,4 +52,11 @@ public class LibSVMClassifier<E> implements BinaryClassifier<E> {
         return Optional.of((int) Math.round(svm.svm_predict(model, featureExtractor.apply(input))) == 1);
     }
 
+    @Override
+    public String toString() {
+        if (param instanceof LabeledParams)
+            return param.toString();
+        else
+            return super.toString();
+    }
 }

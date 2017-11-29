@@ -29,4 +29,9 @@ public class StockTest extends BinaryTest<Stock> {
     public double averageReturn() {
         return picks.stream().mapToDouble(s -> s.calcReturn(evalStart, evalEnd)).average().orElse(1);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n\nPicks: " + picks + "\nAverage return: " + averageReturn();
+    }
 }

@@ -9,7 +9,7 @@
 \copyrightyear{2017}
 
 \begin{document}
-\title{Using support vector machine (SVM) techniques to predict large-cap stock returns}
+\title{Using support vector machine techniques to correlate past and future large-cap stock returns}
 
 \author{Kenneth Allen}
 \affiliation{%
@@ -32,31 +32,12 @@
 \email{jy8672@stu.armstrong.edu}
 
 \begin{abstract}
-News article headlines have traditionally been a source of attraction without providing much content.  Traditionally, the information value of headlines has been considered miniscule at best. This research effort tests these preconceived notions of headline information quality as well as the usability of minable headline data.  The efforts of this study began with attaining a set of approximately one million headlines taken from the Australian Broadcasting Corporation.  The data set was processed using a naive Bayes approach to produce both test and training sets.  The training set was used to make predictions of weekend, month, season, year, election time, first chronological half of the data set, prime minister's affiliation, and originating publication.  The study has concluded that quality information can be extracted and features can be predicted with an accuracy well above that of chance.
+Quantitative analysis of the stock market to predict future behavior has long been a very active area of study with clear applicability, both for profit-seeking and informing macroeconomic policy.  We apply support vector machine techniques to show that simple daily total return data can be shown to be correlated with future performance.  Although our method is not immediately applicable for predicting beyond the current moment in time, it demonstrates that the potential for such models does exist.
 \end{abstract}
 
 \keywords{Machine learning, Support Vector Machines, LibSVM, Stock prediction, S\&P 500}
 
 \maketitle
-
-\section{Background}
-\subsection{Bayes' Theorem}
-Bayes' Theorem is a simple mathematical formula used for calculating conditional probabilities. It figures prominently in subjectivist or Bayesian approaches to epistemology, statistics, and inductive logic. Subjectivists maintain that rational belief is governed by the laws of probability and lean heavily on conditional probabilities in their theories of evidence and their models of empirical learning. Bayes' Theorem is central to these initiatives both because it simplifies the calculation of conditional probabilities and because it clarifies significant features of subjectivist position. Indeed, the Theorem's central insight that a hypothesis is confirmed by any body of data that its truth renders probable is the cornerstone of all subjectivist methodology.
-
-$$P(A|B) = \frac{P(A) P(B|A)}{P(B)}$$
-
-\subsection{Naive Bayes Classification}
-Naive Bayes is a family of algorithms that take advantage of probability theory and Bayes' Theorem to predict the category of a sample (like a piece of news or a customer review). They are probabilistic, which means that they calculate the probability of membership in each category for a given sample, and then output the category with the highest one. The way they get these probabilities is by using Bayes' Theorem, which describes the probability of a feature, based on prior knowledge of conditions that might be related to that feature.
-
-Take a set of classes $C$, a domain $S$, an element $s \in S$, and a set of $s$'s features $a_1, ..., a_n$.  We use simple Laplace smoothing to compensate for some low-probability features occuring zero times in a limited training set.  The classifier is a function $f: S \mapsto C$ defined as such:
-
-$$f(s) = \argmax_{c \in C} P(c|s)$$
-
-$$P(c|s) = \frac{P(c)}{P(s)} P(s|c)$$
-
-$$P(s|c) = \prod_{i = 1}^n P(a_i|c)$$
-
-$$P(a_i|c) = \frac{\textrm{training samples in class with feature} + 1}{\textrm{total training samples in class} + n}$$
 
 \section{Data Processing}
 \begin{figure}
@@ -65,23 +46,21 @@ $$P(a_i|c) = \frac{\textrm{training samples in class with feature} + 1}{\textrm{
   \label{fig:one}
 \end{figure}
 
-\subsection{Training Labels}
-Labeled corpora may be used to train and evaluate a wide range of learning algorithms. Assigning a label is considered a judgment task performed by a human (worker, judge, expert, annotator, etc.).  Labels for this undertaking were determined exclusively by date and originating publication.
-
 \subsection{Data}
-Data used in test and training sets was sourced from two sources.  The first dataset was sourced from the Australian Broadcasting Corporation (\url{http://www.abc.net.au/news/}) and consisted of approximately one million news headlines with corresponding dates.  The second dataset was sourced from Examiner.com (previously at \url{http://www.examiner.com/}) and consisted of approximately three million headlines with corresponding dates.
-
-The first dataset was trained and used to extrapolate weekend, month, season, year, election time, first chronological half of the data set, and current prime minister's party affiliation.  The second dataset was used to train the classifier to distinguish between headlines from two different publications:  a longstanding, public, professional broadcaster and a crowdsourced publishing platform with loose standards.  Essentially, it was being challenged to distingish between news for a regional or global audience, as well as recognizing so-called 'clickbait' designed exclusively to be psychologically enticing.
+The economics department of Armstrong State University has a dataset spanning over 16 years of daily total returns for each stock listed in the Standard \& Poor's 500 Index, which consists of 505 stocks from 500 of the largest companies in the world, measured by total market capitalization.  We were given limited access to this data to perform the experiments for this project.  The data takes the form of dated percentage daily total returns and occupies about 23.8 mibibytes (25 million bytes).
 
 For each test, 10\% of the data was randomly removed and used as a test set while the remaining 90\% was used as a training set.
 
-\subsection{Naive Bayes Classifier}
-The formulas described in the Background section were implemented in Java.  Since the product of so many miniscule fractions can easily underflow an IEEE 64-bit double-precision floating-point number's exponent, the calculations are done using Java's built-in \texttt{BigDecimal} data type, with a precision setting of 32 bits for each of the exponent and significand.
+\subsection{Training Labels}
+Labels for this undertaking were calculated from the excluded data from the test period, which was chosen as the final year of the data:  March 22, 2016, to March 21, 2017.  Each stock was labeled with whether its total return exceeded that of the S\&P 500 index during that period.
+
+\subsection{Classifier}
+Our system uses the LibSVM library to implement SVM training and classification.  It interacts with its programmatic Java API to add features like statistics tracking and training models with different parameters across different threads.  Parameters were evaluated at multiple values from ranges recommended by the LibSVM authors.
 
 \subsection{Prediction}
-Prediction quality was measured with a bevy of statistics.  Accuracy is simple to calculate ($\frac{\textrm{correct classifications}}{\textrm{tested elements}}$), and can be easily compared to the accuracy of a feature-ignorant guess.
+Prediction quality was measured with a bevy of statistics.  Accuracy is simple to calculate ($\frac{\textrm{correct classifications}}{\textrm{tested elements}}$).
 
-For binary criteria, more informative values can be generated.  Use $\mathit{TP}$, $\mathit{FP}$, $\mathit{FN}$, and $\mathit{TN}$, to represent true positives, false positives, false negatives, and true negatives, respectively.  Especially important are true positive rate ($\mathit{TPR} = \frac{\mathit{TP}}{\mathit{TP} + \mathit{FN}}$), true negative rate ($\mathit{TNR} = \frac{\mathit{TN}}{\mathit{FP} + \mathit{TN}}$), positive predictive value ($\mathit{PPV} = \frac{\mathit{TP}}{\mathit{TP} + \mathit{FP}}$), and negative predictive value ($\mathit{NPV} = \frac{\mathit{TN}}{\mathit{FN} + \mathit{TN}}$).
+For binary criteria, more informative values can be generated.  Use $\mathit{TP}$, $\mathit{FP}$, $\mathit{FN}$, and $\mathit{TN}$, to represent true positives, false positives, false negatives, and true negatives, respectively.  Especially important are true positive rate ($\mathit{TPR} = \frac{\mathit{TP}}{\mathit{TP} + \mathit{FN}}$), true negative rate ($\mathit{TNR} = \frac{\mathit{TN}}{\mathit{FP} + \mathit{TN}}$), positive predictive value ($\mathit{PPV} = \frac{\mathit{TP}}{\mathit{TP} + \mathit{FP}}$), and negative predictive value ($\mathit{NPV} = \frac{\mathit{TN}}{\mathit{FN} + \mathit{TN}}$).  ``AUC'' and $F_1$ score are discussed below.
 
 \begin{figure}
   \includegraphics{interpolated-roc}
@@ -89,72 +68,83 @@ For binary criteria, more informative values can be generated.  Use $\mathit{TP}
   \label{fig:two}
 \end{figure}
 
-The Naive Bayesian Classifier does not have a sensitivity parameter, so it only creates one point on a Receiver Operating Characteristic (ROC) graph.  We can trivially interpolate between that point and the points $(0, 0)$ and $(1, 1)$ by imagining a series of classifiers that randomly choose with a certain probability whether to refer to our classifier or to automatically reject or accept, respectively (as in Fig. 2).  (This is equivalent to 'convex hull' techniques, but for a single data point.)  In this way, we get a curve and can calculate the area under it simply as $\mathit{AUC} = \frac{\mathit{TPR} + \mathit{TNR}}{2}$.  The $F_1$ score is calculated as the harmonic mean of $\mathit{TPR}$ and $\mathit{PPV}$:
+Traditional two-class SVM does not have a sensitivity parameter, so it only creates one point on a Receiver Operating Characteristic (ROC) graph.  We can trivially interpolate between that point and the points $(0, 0)$ and $(1, 1)$ by imagining a series of classifiers that randomly choose with a certain probability whether to refer to our classifier or to automatically reject or accept, respectively (as in Fig. 2).  (This is equivalent to `convex hull' techniques, but for a single data point.)  In this way, we get a curve and can calculate the area under it simply as $\mathit{AUC} = \frac{\mathit{TPR} + \mathit{TNR}}{2}$.  The $F_1$ score is calculated as the harmonic mean of $\mathit{TPR}$ and $\mathit{PPV}$:
 
 $$F_1 = \frac{2}{\frac{1}{\mathit{TPR}} + \frac{1}{\mathit{PPV}}}$$
 
 \section{Results and Performance}
 
 \begin{table}
-  \caption{Classifier Results}
+  \caption{Classifier results: top 5 ROC-AUC.}
   \label{tab:one}
-  \begin{tabular}{|p{10em}|l|l|l|l|l|}
+  \begin{tabular}{ll|lll|ll}
+    $C$ & Kernel & Accuracy & ROC-AUC & $F_1$ score & \# Selected & Simulated Return\\
     \hline
-    Criterion & Dataset & Accuracy & Blind Guess & ROC-AUC & $F_1$ score\\
-    \hline
-    publication month & ABC & 0.169 & 0.083 & - & -\\
-    \hline
-    publication season & ABC & 0.346 & 0.250 & - & -\\
-    \hline
-    publication year & ABC & 0.225 & 0.067 & - & -\\
-    \hline
-    first chronological half & ABC & 0.710 & 0.500 & 0.710 & 0.717\\
-    \hline
-    published on weekend & ABC & 0.816 & 0.592 & 0.619 & 0.356\\
-    \hline
-    published in 90 days \newline before natl. election & ABC  & 0.916 & 0.861 & 0.508 & 0.047\\
-    \hline
-    published under Labor \newline Party Prime Minister & ABC  & 0.648 & 0.508 & 0.634 & 0.563\\
-    \hline
-    original publication & ABC \& Examiner.com & 0.931 & 0.617 & 0.912 & 0.953\\
-    \hline
+    0.25 & polynomial (degree 4) & 0.820 & 0.821 & 0.824 & 25 & 35.6\%\\
+    0.5 & polynomial (degree 3) & 0.820 & 0.821 & 0.824 & 25 & 36.0\%\\
+    2 & polynomial (degree 4) & 0.820 & 0.819 & 0.830 & 27 & 34.3\%\\
+    1 & polynomial (degree 2) & 0.820 & 0.819 & 0.830 & 27 & 35.6\%\\
+    1 & polynomial (degree 4) & 0.820 & 0.819 & 0.830 & 27 & 34.3\%\\
   \end{tabular}
 \end{table}
 
-Table 1 gives a summary of the performance of the classifier given different labeling criteria, on a partial and full headline dataset.  The actual Accuracy can be compared favorably to a Random Guess, which is made only with the knowledge of the relative class frequencies (for instance, guessing an article was published on a weekend with a probability of $\frac{2}{7}$ or on a weekday with a probability of $\frac{5}{7}$).  The ROC-AUC (Area Under the Curve of the Interpolated Receiver Operating Characteristic) and $F_1$ score, as described above, also give meaningful insight.  (The $F_1$ scores presented are for the 'positive' conditions; the value for the 'negative' condition would be different.)
+Table 1 gives performance statistics for different parameterizations of the classifier, chosen for the best ``area under the curve'' (for their interpolated receiver operating characteristic).  Since every polynomial polynomial degree between 2 and 10 was tested, we see that quadratic, cubic, and quartic kernels give better results than a linear kernel, higher-degree polynomial kernels, or radial-basis function kernels.  Also, a clear bias toward lower $C$ values is observed.  Each of these classifiers selected about half of the test set of size 50 to beat the market average, which is in line with expectations.
 
 \begin{table}
-  \caption{Most Indicative Words}
+  \caption{Classifier results: top 5 simulated returns.}
   \label{tab:two}
-  \begin{tabular}{r|ll|ll}
-    Rank & 'ABC' Word & Explanation & 'Examiner.com' Word & Explanation\\
+  \begin{tabular}{ll|lll|ll}
+    $C$ & Kernel & Accuracy & ROC-AUC & $F_1$ score & \# Selected & Simulated Return\\
     \hline
-    1 & qld & Abbreviation for Queensland & year-old & Human-interest stories\\
-    2 & nsw & Abbreviation for New South Wales & ncaa & College basketball\\
-    3 & nrn & Rural Australia news section & mom & Stories for \& about mothers\\
-    4 & australias & Originating country & spoilers & Story details of movies/TV\\
-    5 & bendigo & Australian city and bank & rumors & Gossip stories\\
-    6 & townsville & Australian city & dwts & 'Dancing with the Stars', a TV show\\
-    7 & gippsland & Australian region & honors & Headlines about awards\\
-    8 & bikie & Australian slang for "biker" & dlc & 'Downloadable content', a videogame term\\
-    9 & aust & Abbreviation for Australia & gluten-free & Health/diet craze\\
-    10 & bushfire & Australian term for "wildfire" & moms & Stories for \& about mothers\\
+    0.25 & radial-basis ($\gamma = 0.2$) & 0.520 & 0.538 & 0.143 & 2 & 66.8\%\\
+    0.5 & radial-basis ($\gamma = 0.1$) & 0.620 & 0.635 & 0.424 & 7 & 62.0\%\\
+    0.25 & radial-basis ($\gamma = 0.5$) & 0.500 & 0.518 & 0.138 & 3 & 50.3\%\\
+    1 & radial-basis ($\gamma = 0.1$) & 0.580 & 0.591 & 0.432 & 11 & 44.9\%\\
+    0.5 & radial-basis ($\gamma = 0.2$)& 0.580 & 0.591 & 0.432 & 11 & 44.9\%\\
   \end{tabular}
 \end{table}
 
-All of our classifier configurations outperformed random guessing by a significant margin.  Perhaps our most significant result comes when we try to use machine learning to sort the full set of four million headlines between their originating publications.  We can delve into the internals of the collated data for more insight:  Table 2 presents the words most strongly identified with each of the ABC and Examiner.com.  They scored highest in a formula that compares the effect in our Laplace-smoothed Bayesian equations:
+Table 2 shows the top-performers ranked by simulated return, which is calculated by imagining the total return (over the test period) for an investment split equally between each of the stocks the classifier recommended.  We see a much different trend, where the highest possible returns are delivered by classifiers that managed to select very few stocks that each performed excellently.  These classifiers are all based on radial-basis functions with low $\gamma$ and $C$ values.  Further research could help determine why radial-basis function kernels are uniquely suited to fixating on high-performing outliers on our dataset.
 
-$$\textrm{score}(\textrm{word}, \textrm{class}) = \frac{1 + \textrm{instances of word in class}}{(\textrm{number of classes} - 1) + \textrm{instances of words in all other classes}}$$
+\begin{table}
+  \caption{Example classification of test set ($C = 0.25$, quartic kernel).}
+  \label{tab:three}
+  \begin{tabular}{ll|ll|ll}
+KR & -24.1\%   & \textbf{WU} & 10.9\%    & \textbf{AIZ} & 25.4\%\\
+MAT & -21.5\%  & NEM & 12.8\%   & \textbf{NOC} & 26.1\%\\
+KIM & -17.4\%  & FBHS & 14.4\%  & \textbf{HOG} & 28.1\%\\
+HRB & -13.1\%  & HD & 15.9\%    & CBG & 28.5\%\\
+BMY & -12.6\%  & BEN & 17.2\%   & \textbf{QRVO} & 29.5\%\\
+DLTR & -10.5\% & \textbf{HON} & 17.5\%   & \textbf{COO} & 30.6\%\\
+SBUX & -7\%    & CVX & 17.5\%   & \textbf{CTXS} & 30.9\%\\
+AAP & -5.9\%   & \textit{S\&P 500} & 17.5\% & MPC & 35.9\%\\
+DISCA & -1.9\% & \textbf{BWA} & 17.8\%   & \textbf{YHOO} & 36.4\%\\
+\textbf{GE} & 0.3\%     & \textbf{LLY} & 19.5\%   & ATVI & 45.5\%\\
+VRTX & 3.7\%   & FTV & 20\%     & \textbf{ULTA} & 48.2\%\\
+ES & 5.2\%     & \textbf{CCL} & 20.1\%   & \textbf{PRU} & 54.5\%\\
+WLTW & 6.6\%   & \textbf{MCO} & 20.3\%   & \textbf{WDC} & 59.9\%\\
+CHRW & 8.2\%   & KHC & 20.7\%   & \textbf{LRCX} & 61.1\%\\
+UPS & 8.4\%    & \textbf{KMX} & 23.2\%   & \textbf{ZION} & 72.6\%\\
+\textbf{LVLT} & 8.7\%   & \textbf{ARNC} & 24.2\%  & \textbf{CSX} & 79.8\%\\
+FOXA & 9.3\%   & \textbf{CELG} & 24.7\%  & \textbf{MU} & 118.8\%\\
+  \end{tabular}
+\end{table}
+
+Table 3 gives the specific results from the top-performing configuration ranked by ROC-AUC, as in Table 1.  The stocks are sorted by increasing return during the test period, and those that were predicted to outperform the S\&P 500 index have their tickers bolded.  The few false positives (GE, LVLT, WU, and HON) are plainly visible, as are the false negatives (FTV, KHC, CBG, MPC, and ATVI).  The index itself is italicized in approximately the middle of the list, where one would expect it.
 
 \section{Discussion}
-From the test results, it can be concluded that news headline data has a greater amount of informational value than previously assumed.  This study has concluded that it is possible to extrapolate usable information in regard to a multitude of inquiries.  Also, the approach outlined in this report can be used to predict the informational quality of the underlying article of which the headline represents.
+\subsection{Applications}
+Although we used `foreknowledge' of the test period to train our model, these results do demonstrate that stocks that will outperform the market in the future could have similarities in their past performance that machine learning techniques can discuss.  One application of this would be for someone with expert knowledge or insider information to label a training set of stocks.  SVM optimization would create a model that could evaluate whether other stocks are `like' the expert's picks.  Another application could be to time-shift data and see if there are recognizable patterns in daily returns that repeat over intervals, which could potentially be projected into the future.
+
+\subsection{Conclusion}
+Machine learning techniques can be used to distinguish effectively between large-cap stocks that will and will not outperform the market over a specific period of time.  SVM is particularly well-suited to this task because of its configurability and ability to effectively process large training sets with large numbers of features.  Although our model was constructed using foreknowledge of stocks' performance, other, less absolute methods could be used to label training data for the same or similar purposes.
 
 \section{Works Cited}
 \begin{itemize}
-\item A practical explanation of a Naive Bayes classifier. (2017, October 03). Retrieved October 09, 2017, from https://monkeylearn.com/blog/practical-explanation-naive-bayes-classifier/
-\item Joyce, J. (2003, June 28). Bayes' Theorem. Retrieved October 09, 2017, from https://plato.stanford.edu/entries/bayes-theorem/
-\item A simple explanation of Naive Bayes Classification. (n.d.). Retrieved October 10, 2017, from https://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes-classification\#20556654
-\item Mitchell, T. M. (2015). Machine learning. Johanneshov: MTM.
+\item Ben-Hur, A., \& Weston, J. \textit{A User's Guide to Support Vector Machines}. Retrieved from http://pyml.sourceforge.net/doc/howto.pdf
+\item Gavrilov, Z. \textit{SVM Tutorial}. Retrieved from http://web.mit.edu/zoya/www/SVM.pdf
+\item Chang, C., \& Lin, C. \textit{LIBSVM: A Library for Support Vector Machines}. Retrieved from https://www.cs.nmt.edu/~kdd/libsvm.pdf
+\item Smith, B. T. \textit{Lagrange Multipliers Tutorial in the Context of Support Vector Machines}. Retrieved from http://www.engr.mun.ca/~baxter/Publications/LagrangeForSVMs.pdf
 \end{itemize}
 
 \end{document}
