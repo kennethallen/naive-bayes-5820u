@@ -1,10 +1,6 @@
 package me.mostly.ml.test.sp500;
 
-import libsvm.svm_node;
-import libsvm.svm_parameter;
-import libsvm.svm_problem;
 import me.mostly.ml.BinaryClassifier;
-import me.mostly.ml.LibSVMClassifier;
 import me.mostly.ml.NeurophNNClassifier;
 import org.neuroph.core.data.DataSet;
 
@@ -13,12 +9,12 @@ import java.io.FileReader;
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class NNMain {
 
     static final NumberFormat PERCENT_FORMAT = NumberFormat.getPercentInstance();
+
     static {
         PERCENT_FORMAT.setMinimumFractionDigits(1);
         PERCENT_FORMAT.setMaximumFractionDigits(1);
@@ -56,22 +52,14 @@ public class NNMain {
         final DataSet dataSet = NeurophNNClassifier.createDataSet(data.dates.size(), featureExtractor, trainSet, oracle);
 
         // Train classifier and test model.
-//        final Map<svm_parameter, StockTest> results = paramsToTest().parallel()
-//                .collect(Collectors.toMap(Function.identity(),
-//                        p -> {
-//                            System.out.println("Training for parameters: " + p);
-                            final NeurophNNClassifier<Stock> classifier = new NeurophNNClassifier<>(
-                                    featureExtractor, dataSet, data.dates.size(), 50, 20, 1);
+        final NeurophNNClassifier<Stock> classifier = new NeurophNNClassifier<>(
+                featureExtractor, dataSet, data.dates.size(), 50, 20, 1);
 
-                            final StockTest tester = new StockTest(oracle, classifier,
-                                    finalYearStartIdx, data.dates.size());
-                            testSet.forEach(tester::test);
-//                            return tester;
-//                        }));
+        classifier.save(args[1]);
 
-//        results.values().stream()
-//                .sorted(Comparator.comparingDouble(StockTest::rocAuc))
-//                .forEach(System.out::println);
+        final StockTest tester = new StockTest(oracle, classifier,
+                finalYearStartIdx, data.dates.size());
+        testSet.forEach(tester::test);
         System.out.println(tester);
     }
 }

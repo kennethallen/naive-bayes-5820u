@@ -1,0 +1,213 @@
+"C:\Program Files\Java\jdk-9.0.1\bin\java" -Dvisualvm.id=616500452319959 -Xms1024m -Xmx4096m "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\lib\idea_rt.jar=57481:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\out\production\BasicClassifier;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\lib\libsvm.jar;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\lib\neuroph-2.94\neuroph-core-2.94.jar;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\lib\neuroph-2.94\libs\slf4j-api-1.7.5.jar;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\lib\neuroph-2.94\libs\logback-classic-1.0.13.jar;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\lib\neuroph-2.94\libs\logback-core-1.1.2.jar me.mostly.ml.test.sp500.NNMain data/sp500/transposed.csv report-3/optimized.nnet
+Odd val: AES, [180 (10/1/01)] = -0.682890669
+Odd val: AGN, [214 (11/16/01)] = -0.502027397
+Odd val: AAL, [287 (3/6/02)] = -0.507707996
+Odd val: AAL, [381 (7/19/02)] = -0.511579962
+Odd val: AAL, [398 (8/13/02)] = -0.512563474
+Odd val: AAL, [449 (10/24/02)] = -0.505660048
+Odd val: AAL, [546 (3/17/03)] = -0.657192509
+Odd val: AAL, [547 (3/18/03)] = 1.109702861
+Odd val: AIG, [1934 (9/18/08)] = -0.936258159
+Odd val: AIG, [1936 (9/22/08)] = -0.60391605
+Odd val: BIIB, [1041 (3/3/05)] = -0.554316174
+Odd val: COF, [382 (7/22/02)] = -0.506880832
+Odd val: CNC, [211 (11/13/01)] = -0.550718729
+Odd val: CNP, [386 (7/26/02)] = -0.54834081
+Odd val: CERN, [562 (4/8/03)] = -0.598942459
+Odd val: CF, [894 (8/3/04)] = -0.544917668
+Odd val: CF, [940 (10/7/04)] = -0.551746781
+Odd val: CF, [948 (10/19/04)] = -0.568613595
+Odd val: CF, [952 (10/25/04)] = -0.643440236
+Odd val: CF, [957 (11/1/04)] = -0.537393938
+Odd val: CF, [1022 (2/3/05)] = -0.626675246
+Odd val: CF, [1028 (2/11/05)] = -0.751471949
+Odd val: CF, [1036 (2/24/05)] = -0.556689885
+Odd val: CF, [1043 (3/7/05)] = -0.508930224
+Odd val: CI, [453 (10/30/02)] = -0.541695682
+Odd val: ETFC, [1723 (11/15/07)] = -0.883651139
+Odd val: EVHC, [4004 (12/7/16)] = 1.130144199
+Odd val: EQIX, [65 (4/11/01)] = -0.552104366
+Odd val: FITB, [1944 (10/2/08)] = -0.57316632
+Odd val: FSLR, [15 (1/30/01)] = -0.855940659
+Odd val: FSLR, [27 (2/15/01)] = -0.736269266
+Odd val: FSLR, [31 (2/22/01)] = -0.722848748
+Odd val: FSLR, [1412 (8/22/06)] = -0.606698007
+Odd val: GGP, [1947 (10/7/08)] = -0.65555969
+Odd val: GGP, [1950 (10/10/08)] = -0.543614853
+Odd val: GGP, [1971 (11/10/08)] = -0.690920226
+Odd val: GGP, [1975 (11/14/08)] = -1.028160744
+Odd val: GGP, [2082 (4/22/09)] = -0.526820637
+Odd val: HAL, [231 (12/12/01)] = -0.552447281
+Odd val: HIG, [1967 (11/4/08)] = -0.724863467
+Odd val: INCY, [1189 (10/3/05)] = -0.528007379
+Odd val: INCY, [1317 (4/6/06)] = -0.519724459
+Odd val: JCI, [1630 (7/6/07)] = -0.764559863
+Odd val: LNC, [1981 (11/24/08)] = -0.508908533
+Odd val: LKQ, [98 (5/30/01)] = -0.509500243
+Odd val: LKQ, [172 (9/19/01)] = -0.510328606
+Odd val: NFLX, [7 (1/18/01)] = -0.702011797
+Odd val: NFLX, [18 (2/2/01)] = -0.520509194
+Odd val: NFLX, [25 (2/13/01)] = -0.558811337
+Odd val: NFLX, [32 (2/23/01)] = -0.897085279
+Odd val: NFLX, [33 (2/26/01)] = -0.916291043
+Odd val: NFLX, [37 (3/2/01)] = -1.526982908
+Odd val: NFLX, [41 (3/8/01)] = -1.479678445
+Odd val: NFLX, [42 (3/9/01)] = 1.423086915
+Odd val: NFLX, [44 (3/13/01)] = -0.994767488
+Odd val: NFLX, [70 (4/19/01)] = 1.050730712
+Odd val: NFLX, [76 (4/27/01)] = -0.510825624
+Odd val: NFLX, [78 (5/1/01)] = -0.648363856
+Odd val: NFLX, [80 (5/3/01)] = -0.657593165
+Odd val: NFLX, [90 (5/17/01)] = -0.708606881
+Odd val: NFLX, [126 (7/10/01)] = -0.986986293
+Odd val: NFLX, [129 (7/13/01)] = -0.866519333
+Odd val: NFLX, [133 (7/19/01)] = -0.744415035
+Odd val: NFLX, [136 (7/24/01)] = -0.862204152
+Odd val: NFLX, [144 (8/3/01)] = -0.728594093
+Odd val: NFLX, [158 (8/23/01)] = -0.536720473
+Odd val: NFLX, [161 (8/28/01)] = -1.604420941
+Odd val: NFLX, [162 (8/29/01)] = 1.579567308
+Odd val: NFLX, [164 (8/31/01)] = -0.699563656
+Odd val: NFLX, [165 (9/4/01)] = -0.700066792
+Odd val: NFLX, [166 (9/5/01)] = 1.164307166
+Odd val: NFLX, [170 (9/17/01)] = -1.154472536
+Odd val: NFLX, [175 (9/24/01)] = -0.573170483
+Odd val: NFLX, [181 (10/2/01)] = -1.300518293
+Odd val: NFLX, [185 (10/8/01)] = 1.075047788
+Odd val: NFLX, [187 (10/10/01)] = -0.887303314
+Odd val: NFLX, [190 (10/15/01)] = -0.723650329
+Odd val: NFLX, [197 (10/24/01)] = -0.763305122
+Odd val: NFLX, [199 (10/26/01)] = 1.208457521
+Odd val: NFLX, [202 (10/31/01)] = -1.432476649
+Odd val: NFLX, [203 (11/1/01)] = 1.375691319
+Odd val: NFLX, [207 (11/7/01)] = -1.31690883
+Odd val: NFLX, [208 (11/8/01)] = 1.256836419
+Odd val: NFLX, [210 (11/12/01)] = -0.783402139
+Odd val: NFLX, [214 (11/16/01)] = -1.032324183
+Odd val: NFLX, [216 (11/20/01)] = 1.012513488
+Odd val: NFLX, [220 (11/27/01)] = -1.292867443
+Odd val: NFLX, [224 (12/3/01)] = -1.371646857
+Odd val: NFLX, [227 (12/6/01)] = -0.599166417
+Odd val: NFLX, [228 (12/7/01)] = 1.377673446
+Odd val: NFLX, [231 (12/12/01)] = -1.195368913
+Odd val: NFLX, [249 (1/9/02)] = -0.999083019
+Odd val: NFLX, [255 (1/17/02)] = -1.337014634
+Odd val: NFLX, [256 (1/18/02)] = 1.036696108
+Odd val: NFLX, [260 (1/25/02)] = -0.568409397
+Odd val: NFLX, [271 (2/11/02)] = -1.461899139
+Odd val: NFLX, [275 (2/15/02)] = -1.005522505
+Odd val: NFLX, [279 (2/22/02)] = -0.947660838
+Odd val: NFLX, [282 (2/27/02)] = -0.679656888
+Odd val: NFLX, [284 (3/1/02)] = 1.301465346
+Odd val: NFLX, [294 (3/15/02)] = -0.806054228
+Odd val: NFLX, [296 (3/19/02)] = -0.939139222
+Odd val: NFLX, [299 (3/22/02)] = -0.85616643
+Odd val: NFLX, [301 (3/26/02)] = -0.763608566
+Odd val: NFLX, [304 (4/1/02)] = -0.85616643
+Odd val: NFLX, [306 (4/3/02)] = -0.516124451
+Odd val: NFLX, [307 (4/4/02)] = 1.232432747
+Odd val: NFLX, [309 (4/8/02)] = -0.954656601
+Odd val: NFLX, [314 (4/15/02)] = 1.006073131
+Odd val: NFLX, [320 (4/23/02)] = -1.5049402
+Odd val: NFLX, [321 (4/24/02)] = 1.455390068
+Odd val: NFLX, [322 (4/25/02)] = -1.224501908
+Odd val: NFLX, [323 (4/26/02)] = 1.059589999
+Odd val: NFLX, [325 (4/30/02)] = 1.394262131
+Odd val: NFLX, [327 (5/2/02)] = -1.332906513
+Odd val: NFLX, [329 (5/6/02)] = -0.538927082
+Odd val: NFLX, [337 (5/16/02)] = -0.667673737
+Odd val: NFLX, [343 (5/24/02)] = -1.939356397
+Odd val: NFLX, [949 (10/20/04)] = -0.526048673
+Odd val: PCG, [65 (4/11/01)] = -0.552392259
+Odd val: PNC, [2021 (1/23/09)] = -0.534364583
+Odd val: PCLN, [173 (9/20/01)] = -0.50749784
+Odd val: PWR, [372 (7/8/02)] = -1.141076769
+Odd val: REGN, [559 (4/3/03)] = -0.833718173
+Odd val: RF, [1944 (10/2/08)] = -0.528844152
+Odd val: RCL, [173 (9/20/01)] = -0.505400752
+Odd val: CRM, [32 (2/23/01)] = -0.521334871
+Odd val: CRM, [627 (7/11/03)] = -0.582676792
+Odd val: CRM, [822 (4/20/04)] = -0.527682741
+Odd val: SEE, [391 (8/2/02)] = -0.540472714
+Odd val: STT, [2021 (1/23/09)] = -0.892504269
+Odd val: MOS, [1947 (10/7/08)] = -0.532184789
+Odd val: ULTA, [8 (1/19/01)] = -0.562608205
+Odd val: ULTA, [11 (1/24/01)] = -0.562608205
+Odd val: ULTA, [21 (2/7/01)] = -0.515012551
+Odd val: ULTA, [23 (2/9/01)] = -0.562608205
+Odd val: ULTA, [66 (4/12/01)] = -0.562608205
+Odd val: ULTA, [84 (5/9/01)] = -0.562608205
+Odd val: ULTA, [118 (6/27/01)] = -0.562608205
+Odd val: ULTA, [122 (7/3/01)] = -0.562608205
+Odd val: ULTA, [126 (7/10/01)] = -0.515012551
+Odd val: ULTA, [129 (7/13/01)] = -0.562608205
+Odd val: ULTA, [158 (8/23/01)] = -0.515012551
+Odd val: ULTA, [163 (8/30/01)] = -0.515012551
+Odd val: ULTA, [165 (9/4/01)] = -0.562608205
+Odd val: ULTA, [169 (9/10/01)] = -0.515012551
+Odd val: ULTA, [187 (10/10/01)] = -0.515012551
+Odd val: ULTA, [208 (11/8/01)] = -0.562608205
+Odd val: ULTA, [232 (12/13/01)] = -0.562608205
+Odd val: ULTA, [238 (12/21/01)] = -0.562608205
+Odd val: ULTA, [242 (12/28/01)] = -0.515012551
+Odd val: ULTA, [270 (2/8/02)] = -0.515012551
+Odd val: ULTA, [275 (2/15/02)] = -0.640870613
+Odd val: ULTA, [282 (2/27/02)] = -0.595002837
+Odd val: ULTA, [295 (3/18/02)] = -0.566541497
+Odd val: ULTA, [507 (1/17/03)] = -0.757161781
+Odd val: UAL, [293 (3/14/02)] = -0.583146285
+Odd val: UAL, [342 (5/23/02)] = -0.618597024
+Odd val: UAL, [359 (6/18/02)] = -0.529402009
+Odd val: UAL, [363 (6/24/02)] = -0.505854611
+Odd val: UAL, [383 (7/23/02)] = -0.505797329
+Odd val: UAL, [417 (9/10/02)] = -0.530628251
+Odd val: UAL, [419 (9/12/02)] = -0.630273939
+Odd val: UAL, [427 (9/24/02)] = -0.620436833
+Odd val: UAL, [434 (10/3/02)] = -0.655186418
+Odd val: UAL, [455 (11/1/02)] = -0.550932665
+Odd val: VRSN, [326 (5/1/02)] = -0.612092815
+Odd val: WMB, [385 (7/25/02)] = -0.942803094
+Odd val: WMB, [386 (7/26/02)] = -0.524178053
+Odd val: WYNN, [54 (3/27/01)] = -0.695408187
+Odd val: WYNN, [379 (7/17/02)] = -0.590930111
+Odd val: WYNN, [418 (9/11/02)] = -0.741726509
+Odd val: XL, [1952 (10/14/08)] = -0.77223033
+Testing [CERN, APA, ALB, ECL, GPN, MMM, HOLX, JEC, CSRA, REGN, PCLN, XOM, CHD, TROW, LOW, GD, BWA, HCP, AAL, LNT, DLPH, DHI, KO, WMT, BBY, XLNX, INCY, RIG, WRK, EA, QRVO, RCL, CNC, DRI, ISRG, CCL, ATVI, HIG, TSO, ED, PNC, UPS, KIM, DOV, NEE, SWKS, DIS, KMX, A, KORS]
+Oracle: me.mostly.ml.test.sp500.NNMain$$Lambda$29/1690254271@2029142f
+Classifier: me.mostly.ml.NeurophNNClassifier@19defaea
+
+Actual prevalence:                        0.48 (RealPos/Total)
+
+=== RESULTS ===
+True positives (TP):                      10
+False positives (FP):                     4
+False negatives (FN):                     14
+True negatives (TN):                      22
+
+=== DESIRABLE STATS (0 to 1) ===
+Accuracy:                                 0.64 (accuracy=(TP+TN)/Total)
+True positive rate (Recall, Sensitivity): 0.4166666666666667 (TPR=TP/RealPos)
+True negative rate (Specificity):         0.8461538461538461 (TNR=TN/RealNeg)
+Positive predictive value (Precision):    0.7142857142857143 (PPV=TP/PredictedPos)
+Negative predictive value:                0.6111111111111112 (NPV=TN/PredictedNeg)
+Area under convex hull ROC curve:         0.6314102564102564 (area=(TPR+TNR)/2)
+F1 score:                                 0.5263157894736842 (F1=2/(1/TPR + 1/PPV))
+F1 score (negative condition):            0.7096774193548386 (F1=2/(1/TNR + 1/NPV))
+
+=== UNDESIRABLE STATS (0 to 1) ===
+Inaccuracy:                               0.36 (inaccuracy=(FP+FN)/Total)
+False positive rate (Fallout):            0.15384615384615385 (FPR=FP/RealNeg)
+False negative rate (Miss rate):          0.5833333333333334 (FNR=FN/RealPos)
+False discovery rate (False alarm):       0.2857142857142857 (FDR=FP/PredictedPos)
+False omission rate:                      0.3888888888888889 (FOR=FN/PredictedNeg)
+
+=== DESCRIPTIVE STATS (0 to inf) ===
+Positive likelihood ratio (high better):  2.7083333333333335 (LR+=TPR/FPR)
+Negative likelihood ratio (low better):   0.6893939393939394 (LR-=FNR/TNR)
+Diagnostic odds ratio (high better):      3.9285714285714284 (DOR=LR+/LR-)
+
+
+Picks: [A, AAL, ATVI, CNC, CSRA, DOV, EA, GD, GPN, HIG, KMX, PNC, SWKS, XLNX]
+Average return: 1.26547247970945
+
+Process finished with exit code 0

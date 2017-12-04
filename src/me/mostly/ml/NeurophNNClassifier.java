@@ -1,18 +1,18 @@
 package me.mostly.ml;
 
-import libsvm.svm_node;
-import libsvm.svm_problem;
+import org.neuroph.core.NeuralNetwork;
 import org.neuroph.core.data.DataSet;
 import org.neuroph.nnet.MultiLayerPerceptron;
-import org.neuroph.nnet.learning.BackPropagation;
 
-import java.util.*;
+import java.io.File;
+import java.util.AbstractMap;
+import java.util.Collection;
+import java.util.Optional;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class NeurophNNClassifier<E> implements BinaryClassifier<E> {
 
-    final MultiLayerPerceptron nn;
+    final NeuralNetwork nn;
     final Function<? super E, double[]> featureExtractor;
     final double sensitivity = 0.5;
 
@@ -43,5 +43,14 @@ public class NeurophNNClassifier<E> implements BinaryClassifier<E> {
                 .forEach(e -> data.addRow(
                         featureExtractor.apply(e.getKey()), e.getValue() ? POSITIVE_LABEL : NEGATIVE_LABEL));
         return data;
+    }
+
+    public void save(final String path) {
+        nn.save(path);
+    }
+
+    public NeurophNNClassifier(Function<? super E, double[]> featureExtractor, final File path) {
+        this.featureExtractor = featureExtractor;
+        this.nn = NeuralNetwork.createFromFile(path);
     }
 }
