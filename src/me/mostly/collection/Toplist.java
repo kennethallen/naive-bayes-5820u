@@ -15,7 +15,7 @@ public class Toplist<E> extends AbstractCollection<E> {
     final Comparator<? super E> comparator;
 
     public Toplist(int num) {
-        this(num, (Comparator<? super E>) Comparator.naturalOrder());
+        this(num, (Comparator<E>) Comparator.naturalOrder());
     }
 
     public Toplist(int num, final Comparator<? super E> comparator) {
