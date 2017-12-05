@@ -29,7 +29,7 @@ public class Data {
 
     public static Data loadFrom(final Reader read) {
         final List<Date> dates = new ArrayList<>();
-        final List<ForkJoinTask<Stock>> futureStocks = new ArrayList<>();
+        final List<ForkJoinTask<Stock>> futureStocks = new ArrayList<>(504);
 
         try (final BufferedReader in =
                      read instanceof BufferedReader ? (BufferedReader) read : new BufferedReader(read)) {
