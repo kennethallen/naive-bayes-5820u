@@ -53,7 +53,7 @@ public class NNMain {
 
         // Train classifier and test model.
         final NeurophNNClassifier<Stock> classifier = new NeurophNNClassifier<>(
-                featureExtractor, dataSet, data.dates.size(), 50, 20, 1);
+                featureExtractor, dataSet, data.dates.size(), 30, 1);
 
         classifier.save(args[1]);
 

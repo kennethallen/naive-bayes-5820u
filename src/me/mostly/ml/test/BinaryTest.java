@@ -55,6 +55,22 @@ public class BinaryTest<E> {
         return results.get(false).getOrDefault(false, 0);
     }
 
+    public double tpr() {
+        return ((double) truePositives()) / (truePositives() + falseNegatives());
+    }
+
+    public double fpr() {
+        return ((double) falsePositives()) / (trueNegatives() + falsePositives());
+    }
+
+    public double fnr() {
+        return ((double) falseNegatives()) / (truePositives() + falseNegatives());
+    }
+
+    public double tnr() {
+        return ((double) trueNegatives()) / (trueNegatives() + falsePositives());
+    }
+
     public double rocAuc() {
         return 0.5 * ((((double) truePositives()) / (truePositives() + falseNegatives()))
                 + (((double) trueNegatives()) / (falsePositives() + trueNegatives())));

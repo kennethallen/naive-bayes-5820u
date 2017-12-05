@@ -14,7 +14,7 @@ public class NeurophNNClassifier<E> implements BinaryClassifier<E> {
 
     final NeuralNetwork nn;
     final Function<? super E, double[]> featureExtractor;
-    final double sensitivity = 0.5;
+    double strictness = 0.5;
 
     public NeurophNNClassifier(Function<? super E, double[]> featureExtractor,
                                final DataSet trainingSet, final int... layerSizes) {
@@ -28,7 +28,13 @@ public class NeurophNNClassifier<E> implements BinaryClassifier<E> {
     public Optional<Boolean> classify(E input) {
         nn.setInput(featureExtractor.apply(input));
         nn.calculate();
-        return Optional.of(nn.getOutput()[0] > sensitivity);
+        return Optional.of(nn.getOutput()[0] >= strictness);
+    }
+
+    public void setStrictness(final double strictness) {
+        if (!(strictness >= 0 && strictness <= 1))
+            throw new IllegalArgumentException("Strictness must be in [0, 1]: " + strictness);
+        this.strictness = strictness;
     }
 
     private static final double[] NEGATIVE_LABEL = {0}, POSITIVE_LABEL = {1};

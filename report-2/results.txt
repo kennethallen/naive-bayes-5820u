@@ -1,4 +1,4 @@
-"C:\Program Files\Java\jdk-9.0.1\bin\java" -Dvisualvm.id=170415548485161 -Xms1024m -Xmx4096m "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\lib\idea_rt.jar=53735:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\project-1\out\production\BasicClassifier;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\project-1\lib\libsvm.jar me.mostly.ml.test.sp500.Main ../project-2/data/transposed.csv
+"C:\Program Files\Java\jdk-9.0.1\bin\java" -Dvisualvm.id=170415548485161 -Xms1024m -Xmx4096m "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\lib\idea_rt.jar=53735:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.2.4\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\project-1\out\production\BasicClassifier;C:\Users\Kenneth\Dropbox\Code\IdeaProjects\BasicClassifier\project-1\lib\libsvm.jar me.mostly.ml.test.sp500.SVMMain ../project-2/data/transposed.csv
 Odd val: AES, [180 (10/1/01)] = -0.682890669
 Odd val: AGN, [214 (11/16/01)] = -0.502027397
 Odd val: AAL, [287 (3/6/02)] = -0.507707996
@@ -1224,7 +1224,7 @@ nu = 0.0025880413178490675
 obj = -2.9309567284542313, rho = 0.11515533459163954
 nSV = 395, nBSV = 0
 Total nSV = 395
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1260,7 +1260,7 @@ Diagnostic odds ratio (high better):      0.0 (DOR=LR+/LR-)
 
 Picks: [HON]
 Average return: 1.1746591034487845
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1296,7 +1296,7 @@ Diagnostic odds ratio (high better):      NaN (DOR=LR+/LR-)
 
 Picks: []
 Average return: 1.0
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1332,7 +1332,7 @@ Diagnostic odds ratio (high better):      NaN (DOR=LR+/LR-)
 
 Picks: []
 Average return: 1.0
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1368,7 +1368,7 @@ Diagnostic odds ratio (high better):      NaN (DOR=LR+/LR-)
 
 Picks: []
 Average return: 1.0
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1404,7 +1404,7 @@ Diagnostic odds ratio (high better):      1.9166666666666667 (DOR=LR+/LR-)
 
 Picks: [BEN, LRCX, ZION]
 Average return: 1.5030623877999485
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1440,7 +1440,7 @@ Diagnostic odds ratio (high better):      1.6666666666666667 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CSX, GE, HON, LRCX, ZION]
 Average return: 1.3630338052763524
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1476,7 +1476,7 @@ Diagnostic odds ratio (high better):      Infinity (DOR=LR+/LR-)
 
 Picks: [LRCX, ZION]
 Average return: 1.6683847702323167
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1512,7 +1512,7 @@ Diagnostic odds ratio (high better):      2.5789473684210527 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, GE, HON, LRCX, NOC, ZION]
 Average return: 1.336645787206057
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1548,7 +1548,7 @@ Diagnostic odds ratio (high better):      2.3749999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BEN, CTXS, FBHS, GE, HON, LRCX, LVLT, MU, PRU, WDC, YHOO, ZION]
 Average return: 1.3916375496829536
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1584,7 +1584,7 @@ Diagnostic odds ratio (high better):      3.1111111111111116 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, CTXS, GE, HON, LRCX, MU, PRU, WDC, YHOO, ZION]
 Average return: 1.4486217591800596
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1620,7 +1620,7 @@ Diagnostic odds ratio (high better):      3.1111111111111116 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, CTXS, GE, HON, LRCX, MU, PRU, WDC, YHOO, ZION]
 Average return: 1.4486217591800596
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1656,7 +1656,7 @@ Diagnostic odds ratio (high better):      3.705882352941176 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, GE, HON, LLY, LRCX, MCO, NOC, ZION]
 Average return: 1.3137247823727762
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1692,7 +1692,7 @@ Diagnostic odds ratio (high better):      3.705882352941176 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, GE, HON, LLY, LRCX, MCO, NOC, ZION]
 Average return: 1.3137247823727762
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1728,7 +1728,7 @@ Diagnostic odds ratio (high better):      3.705882352941176 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, GE, HON, LLY, LRCX, MCO, NOC, ZION]
 Average return: 1.3137247823727762
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1764,7 +1764,7 @@ Diagnostic odds ratio (high better):      3.705882352941176 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, GE, HON, LLY, LRCX, MCO, NOC, ZION]
 Average return: 1.3137247823727762
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1800,7 +1800,7 @@ Diagnostic odds ratio (high better):      3.705882352941176 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, GE, HON, LLY, LRCX, MCO, NOC, ZION]
 Average return: 1.3137247823727762
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1836,7 +1836,7 @@ Diagnostic odds ratio (high better):      3.705882352941176 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, GE, HON, LLY, LRCX, MCO, NOC, ZION]
 Average return: 1.3137247823727762
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, RBF kernel (gamma=2.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1872,7 +1872,7 @@ Diagnostic odds ratio (high better):      3.705882352941176 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, GE, HON, LLY, LRCX, MCO, NOC, ZION]
 Average return: 1.3137247823727762
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1908,7 +1908,7 @@ Diagnostic odds ratio (high better):      3.705882352941176 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, CTXS, GE, HON, LRCX, MU, PRU, ZION]
 Average return: 1.4290844156345248
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1944,7 +1944,7 @@ Diagnostic odds ratio (high better):      3.2571428571428576 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, CCL, CSX, CTXS, FBHS, GE, HOG, HON, LRCX, LVLT, MU, PRU, WDC, YHOO, ZION]
 Average return: 1.4059490822731824
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -1980,7 +1980,7 @@ Diagnostic odds ratio (high better):      4.375 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CCL, CSX, CTXS, GE, HOG, HON, LRCX, MCO, NOC, ZION]
 Average return: 1.319983580041711
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2016,7 +2016,7 @@ Diagnostic odds ratio (high better):      Infinity (DOR=LR+/LR-)
 
 Picks: [CTXS, LRCX, MU, PRU, WDC, YHOO, ZION]
 Average return: 1.6203941367810302
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2052,7 +2052,7 @@ Diagnostic odds ratio (high better):      6.000000000000001 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, CCL, CSX, CTXS, GE, HOG, HON, LRCX, MU, PRU, WDC, YHOO, ZION]
 Average return: 1.4446733313308575
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2088,7 +2088,7 @@ Diagnostic odds ratio (high better):      5.833333333333333 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CCL, CSX, CTXS, FBHS, GE, HOG, HON, LRCX, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.402920608395687
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2124,7 +2124,7 @@ Diagnostic odds ratio (high better):      5.833333333333333 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BEN, CCL, CSX, CTXS, FBHS, GE, HOG, HON, LRCX, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.407142065810557
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2160,7 +2160,7 @@ Diagnostic odds ratio (high better):      7.0 (DOR=LR+/LR-)
 
 Picks: [ARNC, BMY, BWA, CCL, CSX, CTXS, GE, HOG, HON, LLY, LRCX, MCO, NOC, PRU, YHOO, ZION]
 Average return: 1.3103720515145483
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2196,7 +2196,7 @@ Diagnostic odds ratio (high better):      7.0 (DOR=LR+/LR-)
 
 Picks: [ARNC, BMY, BWA, CCL, CSX, CTXS, GE, HOG, HON, LLY, LRCX, MCO, NOC, PRU, YHOO, ZION]
 Average return: 1.3103720515145483
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2232,7 +2232,7 @@ Diagnostic odds ratio (high better):      7.0 (DOR=LR+/LR-)
 
 Picks: [ARNC, BMY, BWA, CCL, CSX, CTXS, GE, HOG, HON, LLY, LRCX, MCO, NOC, PRU, YHOO, ZION]
 Average return: 1.3103720515145483
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2268,7 +2268,7 @@ Diagnostic odds ratio (high better):      7.0 (DOR=LR+/LR-)
 
 Picks: [ARNC, BMY, BWA, CCL, CSX, CTXS, GE, HOG, HON, LLY, LRCX, MCO, NOC, PRU, YHOO, ZION]
 Average return: 1.3103720515145483
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2304,7 +2304,7 @@ Diagnostic odds ratio (high better):      7.0 (DOR=LR+/LR-)
 
 Picks: [ARNC, BMY, BWA, CCL, CSX, CTXS, GE, HOG, HON, LLY, LRCX, MCO, NOC, PRU, YHOO, ZION]
 Average return: 1.3103720515145483
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2340,7 +2340,7 @@ Diagnostic odds ratio (high better):      7.0 (DOR=LR+/LR-)
 
 Picks: [ARNC, BMY, BWA, CCL, CSX, CTXS, GE, HOG, HON, LLY, LRCX, MCO, NOC, PRU, YHOO, ZION]
 Average return: 1.3103720515145483
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2376,7 +2376,7 @@ Diagnostic odds ratio (high better):      8.166666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CCL, CSX, CTXS, GE, HOG, HON, LRCX, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.4181415249761622
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, RBF kernel (gamma=1.0)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2412,7 +2412,7 @@ Diagnostic odds ratio (high better):      10.999999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, BWA, CCL, CSX, CTXS, GE, HOG, HON, LLY, LRCX, MCO, NOC, PRU, YHOO, ZION]
 Average return: 1.3394501306296718
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2448,7 +2448,7 @@ Diagnostic odds ratio (high better):      9.545454545454545 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, CSX, CTXS, FBHS, FTV, GE, HOG, HON, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.4058885795584246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2484,7 +2484,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2520,7 +2520,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2556,7 +2556,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2592,7 +2592,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2628,7 +2628,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2664,7 +2664,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2700,7 +2700,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2736,7 +2736,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2772,7 +2772,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=7)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2808,7 +2808,7 @@ Diagnostic odds ratio (high better):      8.095238095238095 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BMY, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.32588115154059
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2844,7 +2844,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2880,7 +2880,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2916,7 +2916,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2952,7 +2952,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -2988,7 +2988,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3024,7 +3024,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3060,7 +3060,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3096,7 +3096,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3132,7 +3132,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3168,7 +3168,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3204,7 +3204,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3240,7 +3240,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3276,7 +3276,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3312,7 +3312,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3348,7 +3348,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3384,7 +3384,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3420,7 +3420,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3456,7 +3456,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3492,7 +3492,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3528,7 +3528,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3564,7 +3564,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3600,7 +3600,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3636,7 +3636,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3672,7 +3672,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=8)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3708,7 +3708,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3744,7 +3744,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3780,7 +3780,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3816,7 +3816,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=9)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3852,7 +3852,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.349180184089289
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=10)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3888,7 +3888,7 @@ Diagnostic odds ratio (high better):      8.142857142857142 (DOR=LR+/LR-)
 
 Picks: [ARNC, BEN, BWA, CBG, CCL, CELG, CSX, CTXS, FTV, GE, HOG, HON, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, VRTX, WDC, WU, YHOO, ZION]
 Average return: 1.3389842130302045
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3924,7 +3924,7 @@ Diagnostic odds ratio (high better):      8.549999999999997 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, WU, ZION]
 Average return: 1.3509662249123775
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3960,7 +3960,7 @@ Diagnostic odds ratio (high better):      8.549999999999997 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, WU, ZION]
 Average return: 1.3509662249123775
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -3996,7 +3996,7 @@ Diagnostic odds ratio (high better):      8.549999999999997 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, WU, ZION]
 Average return: 1.3509662249123775
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4032,7 +4032,7 @@ Diagnostic odds ratio (high better):      8.549999999999997 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, WU, ZION]
 Average return: 1.3509662249123775
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4068,7 +4068,7 @@ Diagnostic odds ratio (high better):      8.549999999999997 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, WU, ZION]
 Average return: 1.3509662249123775
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4104,7 +4104,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4140,7 +4140,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4176,7 +4176,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4212,7 +4212,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4248,7 +4248,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4284,7 +4284,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, CCL, CHRW, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, SBUX, WDC, YHOO, ZION]
 Average return: 1.3459860565126156
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4320,7 +4320,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4356,7 +4356,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4392,7 +4392,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4428,7 +4428,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4464,7 +4464,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3471639248119087
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=6)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4500,7 +4500,7 @@ Diagnostic odds ratio (high better):      10.314285714285713 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, WDC, WU, YHOO, ZION]
 Average return: 1.346025709588712
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4536,7 +4536,7 @@ Diagnostic odds ratio (high better):      11.25 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, ZION]
 Average return: 1.3619858717701667
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4572,7 +4572,7 @@ Diagnostic odds ratio (high better):      11.25 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, UPS, WDC, YHOO, ZION]
 Average return: 1.3691933295859235
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4608,7 +4608,7 @@ Diagnostic odds ratio (high better):      11.25 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, UPS, WDC, YHOO, ZION]
 Average return: 1.3691933295859235
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4644,7 +4644,7 @@ Diagnostic odds ratio (high better):      13.222222222222223 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, CCL, CSX, CTXS, FBHS, GE, HOG, HON, KMX, LRCX, MCO, MU, NOC, PRU, ULTA, WDC, YHOO, ZION]
 Average return: 1.4036675468348552
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, linear kernel
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4680,7 +4680,7 @@ Diagnostic odds ratio (high better):      13.222222222222223 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, CCL, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.3895567247431635
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4716,7 +4716,7 @@ Diagnostic odds ratio (high better):      17.599999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BWA, CCL, CSX, CTXS, GE, HOG, HON, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.407457101004016
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4752,7 +4752,7 @@ Diagnostic odds ratio (high better):      12.599999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3423898900517557
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4788,7 +4788,7 @@ Diagnostic odds ratio (high better):      12.599999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3423898900517557
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4824,7 +4824,7 @@ Diagnostic odds ratio (high better):      12.599999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3423898900517557
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4860,7 +4860,7 @@ Diagnostic odds ratio (high better):      12.599999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3423898900517557
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4896,7 +4896,7 @@ Diagnostic odds ratio (high better):      12.599999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3423898900517557
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4932,7 +4932,7 @@ Diagnostic odds ratio (high better):      12.599999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3423898900517557
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -4968,7 +4968,7 @@ Diagnostic odds ratio (high better):      12.599999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3423898900517557
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5004,7 +5004,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5040,7 +5040,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5076,7 +5076,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5112,7 +5112,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5148,7 +5148,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5184,7 +5184,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5220,7 +5220,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5256,7 +5256,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5292,7 +5292,7 @@ Diagnostic odds ratio (high better):      12.666666666666666 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, CELG, CSX, CTXS, GE, HOG, HON, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3514831622318246
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5328,7 +5328,7 @@ Diagnostic odds ratio (high better):      13.571428571428575 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, YHOO, ZION]
 Average return: 1.3620651907507888
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5364,7 +5364,7 @@ Diagnostic odds ratio (high better):      13.571428571428575 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, YHOO, ZION]
 Average return: 1.3620651907507888
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5400,7 +5400,7 @@ Diagnostic odds ratio (high better):      13.571428571428575 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BWA, CCL, CSX, CTXS, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MU, NOC, PRU, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3694449262063082
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5436,7 +5436,7 @@ Diagnostic odds ratio (high better):      13.571428571428575 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, YHOO, ZION]
 Average return: 1.3620651907507888
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, RBF kernel (gamma=0.1)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5472,7 +5472,7 @@ Diagnostic odds ratio (high better):      13.571428571428575 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MPC, MU, NOC, PRU, SBUX, WDC, YHOO, ZION]
 Average return: 1.3620651907507888
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5508,7 +5508,7 @@ Diagnostic odds ratio (high better):      15.749999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.3827822396966112
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5544,7 +5544,7 @@ Diagnostic odds ratio (high better):      15.749999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.3827822396966112
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5580,7 +5580,7 @@ Diagnostic odds ratio (high better):      15.749999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.3827822396966112
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5616,7 +5616,7 @@ Diagnostic odds ratio (high better):      15.749999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.3827822396966112
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, RBF kernel (gamma=0.2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5652,7 +5652,7 @@ Diagnostic odds ratio (high better):      15.749999999999998 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.3827822396966112
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5688,7 +5688,7 @@ Diagnostic odds ratio (high better):      20.77777777777778 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.4032982394506421
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5724,7 +5724,7 @@ Diagnostic odds ratio (high better):      20.77777777777778 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.4032982394506421
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5760,7 +5760,7 @@ Diagnostic odds ratio (high better):      20.77777777777778 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.4032982394506421
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5796,7 +5796,7 @@ Diagnostic odds ratio (high better):      20.77777777777778 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.4032982394506421
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5832,7 +5832,7 @@ Diagnostic odds ratio (high better):      20.77777777777778 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.4032982394506421
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, RBF kernel (gamma=0.5)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5868,7 +5868,7 @@ Diagnostic odds ratio (high better):      20.77777777777778 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, LLY, LRCX, MCO, MU, NOC, PRU, WDC, YHOO, ZION]
 Average return: 1.4032982394506421
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5904,7 +5904,7 @@ Diagnostic odds ratio (high better):      15.959999999999999 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.349141338186232
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5940,7 +5940,7 @@ Diagnostic odds ratio (high better):      19.0 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, GE, HOG, HON, KMX, LLY, LRCX, MCO, MU, NOC, PRU, ULTA, WDC, YHOO, ZION]
 Average return: 1.3897358218516032
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -5976,7 +5976,7 @@ Diagnostic odds ratio (high better):      22.999999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.333642414085343
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6012,7 +6012,7 @@ Diagnostic odds ratio (high better):      22.999999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.333642414085343
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6048,7 +6048,7 @@ Diagnostic odds ratio (high better):      22.999999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.333642414085343
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6084,7 +6084,7 @@ Diagnostic odds ratio (high better):      22.999999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.333642414085343
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6120,7 +6120,7 @@ Diagnostic odds ratio (high better):      22.999999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.333642414085343
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6156,7 +6156,7 @@ Diagnostic odds ratio (high better):      22.999999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.333642414085343
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6192,7 +6192,7 @@ Diagnostic odds ratio (high better):      22.999999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.333642414085343
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6228,7 +6228,7 @@ Diagnostic odds ratio (high better):      22.999999999999996 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.333642414085343
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=20.0, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6264,7 +6264,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3436266806175827
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=10.0, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6300,7 +6300,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3436266806175827
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=50.0, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6336,7 +6336,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3436266806175827
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1000.0, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6372,7 +6372,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3436266806175827
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=5.0, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6408,7 +6408,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3436266806175827
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=100.0, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6444,7 +6444,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3436266806175827
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6480,7 +6480,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3436266806175827
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=1.0, poly kernel (gamma=1.0, coef0=1.0, degree=2)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6516,7 +6516,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, ATVI, CCL, COO, CSX, CTXS, FBHS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3564396582178633
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=2.0, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6552,7 +6552,7 @@ Diagnostic odds ratio (high better):      20.899999999999995 (DOR=LR+/LR-)
 
 Picks: [ARNC, ATVI, BMY, BWA, CCL, COO, CSX, CTXS, FTV, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3436266806175827
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.5, poly kernel (gamma=1.0, coef0=1.0, degree=3)
 
 Actual prevalence:                        0.52 (RealPos/Total)
@@ -6588,7 +6588,7 @@ Diagnostic odds ratio (high better):      21.0 (DOR=LR+/LR-)
 
 Picks: [AIZ, ARNC, BWA, CCL, COO, CSX, CTXS, GE, HOG, HON, KMX, LLY, LRCX, LVLT, MCO, MPC, MU, NOC, PRU, QRVO, ULTA, WDC, WU, YHOO, ZION]
 Average return: 1.3600749469206852
-Oracle: me.mostly.ml.test.sp500.Main$$Lambda$29/1447689627@4b14c583
+Oracle: me.mostly.ml.test.sp500.SVMMain$$Lambda$29/1447689627@4b14c583
 Classifier: C=0.25, poly kernel (gamma=1.0, coef0=1.0, degree=4)
 
 Actual prevalence:                        0.52 (RealPos/Total)
