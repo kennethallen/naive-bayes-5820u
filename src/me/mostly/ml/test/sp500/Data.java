@@ -6,6 +6,8 @@ import java.io.Reader;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.stream.Collectors;
 
 public class Data {
 
@@ -27,7 +29,7 @@ public class Data {
 
     public static Data loadFrom(final Reader read) {
         final List<Date> dates = new ArrayList<>();
-        final List<Stock> stocks = new ArrayList<>();
+        final List<ForkJoinTask<Stock>> futureStocks = new ArrayList<>();
 
         try (final BufferedReader in =
                      read instanceof BufferedReader ? (BufferedReader) read : new BufferedReader(read)) {
@@ -39,21 +41,24 @@ public class Data {
                 }
             }
 
-            String line;
-            while ((line = in.readLine()) != null) {
-                final Scanner scan = new Scanner(line).useDelimiter(",");
-                final String ticker = scan.next();
-                final double[] entries = new double[dates.size()];
-                for (int i = 0; i < entries.length; i++) {
-                    entries[i] = scan.nextDouble();
+            String inStr;
+            while ((inStr = in.readLine()) != null) {
+                final String line = inStr;
+                futureStocks.add(ForkJoinPool.commonPool().submit(() -> {
+                    final Scanner scan = new Scanner(line).useDelimiter(",");
+                    final String ticker = scan.next();
+                    final double[] entries = new double[dates.size()];
+                    for (int i = 0; i < entries.length; i++) {
+                        entries[i] = scan.nextDouble();
 
-                    // Sanity check
-                    if (!(entries[i] > -0.5 && entries[i] < 1)) {
-                        System.out.println("Odd val: " + ticker + ", [" + i
-                                + " (" + DATE_FORMAT.format(dates.get(i)) + ")] = " + entries[i]);
+                        // Sanity check
+                        if (!(entries[i] > -0.5 && entries[i] < 1)) {
+                            System.out.println("Odd val: " + ticker + ", [" + i
+                                    + " (" + DATE_FORMAT.format(dates.get(i)) + ")] = " + entries[i]);
+                        }
                     }
-                }
-                stocks.add(new Stock(ticker, entries));
+                    return new Stock(ticker, entries);
+                }));
             }
         } catch (final IOException e) {
             throw new RuntimeException("Error reading input file.", e);
@@ -61,6 +66,12 @@ public class Data {
             throw new RuntimeException("Error parsing number or date.", e);
         }
 
-        return new Data(dates, stocks);
+        return new Data(dates, futureStocks.stream().map(f -> {
+            try {
+                return f.get();
+            } catch (final Exception e) {
+                throw new RuntimeException(e);
+            }
+        }).collect(Collectors.toList()));
     }
 }
